@@ -3,6 +3,9 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import LogoWide from "@/images/logo-wide.png"
 import LogoTall from "@/images/logo.png"
+import posed, { PoseGroup } from "react-pose"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
 const NavBar = styled.nav`
   background-image: linear-gradient(
@@ -11,7 +14,7 @@ const NavBar = styled.nav`
     rgba(0, 0, 0, 0)
   );
   padding: 20px;
-  position: absolute;
+  position: sticky;
   top: 0;
   display: flex;
   align-items: center;
@@ -33,32 +36,6 @@ const NavBar = styled.nav`
     top: 4px;
   }
 
-  & ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    @media screen and (max-width: 600px) {
-      display: none;
-      visibility: none;
-    }
-
-    & li {
-      display: inline-block;
-
-      a {
-        text-decoration: none;
-        color: inherit;
-        margin-right: 20px;
-        padding-bottom: 5px;
-
-        &.active {
-          border-bottom: 3px solid #fff;
-        }
-      }
-    }
-  }
-
   .logo {
     width: 300px;
     background-image: url(${LogoWide});
@@ -75,28 +52,169 @@ const NavBar = styled.nav`
   }
 `
 
-export default function Header() {
+const NavLinksMobile = styled.div`
+  display: block;
+  visibility: visible;
+
+  @media screen and (min-width: 600px) {
+    display: none;
+    visibility: hidden;
+  }
+`
+const NavLinksDesktop = styled.div`
+  display: block;
+  visibility: visible;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+    visibility: hidden;
+  }
+`
+
+const NavList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  & li {
+    display: inline-block;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      margin-right: 20px;
+      padding-bottom: 5px;
+
+      &.active {
+        border-bottom: 3px solid #fff;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    li {
+      display: block;
+      border-bottom: 1px solid #ddd;
+
+      a {
+        margin-right: 0;
+        padding-bottom: 0;
+        display: block;
+        padding: 20px;
+
+        &.active {
+          background-color: #ddd;
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+`
+
+const Hamburger = styled.button`
+  border: none;
+  position: absolute;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 1000px;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  display: block;
+  visibility: visible;
+
+  @media screen and (min-width: 600px) {
+    display: none;
+    visibilty: hidden;
+  }
+`
+
+const Sidebar = styled.nav`
+  height: 100vh;
+  width: 70vw;
+  transition: all 0.1s ease-in;
+  transform: translateX(${props => (props.open ? "0vh" : "-70vw")});
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
+  color: #000;
+`
+
+const CloseButton = styled.button`
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 1000px;
+  background-color: transparent;
+`
+
+const OverlayPosed = posed.div({
+  enter: { opacity: 1 },
+  exit: { opacity: 0 },
+})
+
+const Overlay = styled(OverlayPosed)`
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+`
+
+function NavLinks() {
   return (
-    <div>
-      <NavBar>
-        <Link to="/">
-          <h1>
-            <div className="logo" />
-          </h1>
+    <NavList>
+      <li>
+        <Link to="/" activeClassName="active">
+          Home
         </Link>
-        <ul className="full-screen-nav">
-          <li>
-            <Link to="/" activeClassName="active">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about/" activeClassName="active">
-              About
-            </Link>
-          </li>
-        </ul>
-      </NavBar>
-    </div>
+      </li>
+      <li>
+        <Link to="/about/" activeClassName="active">
+          About
+        </Link>
+      </li>
+    </NavList>
+  )
+}
+
+export default function Header() {
+  const [openSidebar, setOpenSidebar] = React.useState(false)
+
+  function toggleSidebar() {
+    setOpenSidebar(!openSidebar)
+  }
+
+  return (
+    <NavBar>
+      <Hamburger onClick={toggleSidebar}>
+        <FontAwesomeIcon icon={faBars} />
+      </Hamburger>
+      <Link to="/">
+        <h1>
+          <div className="logo" />
+        </h1>
+      </Link>
+      <NavLinksDesktop>
+        <NavLinks />
+      </NavLinksDesktop>
+      <PoseGroup>
+        {openSidebar && [<Overlay onClick={toggleSidebar} key="overlay" />]}
+      </PoseGroup>
+      <NavLinksMobile>
+        <Sidebar open={openSidebar}>
+          <CloseButton onClick={toggleSidebar}>
+            <FontAwesomeIcon icon={faTimes} />
+          </CloseButton>
+          <NavLinks />
+        </Sidebar>
+      </NavLinksMobile>
+    </NavBar>
   )
 }

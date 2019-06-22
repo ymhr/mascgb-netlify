@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Lato|Patua+One&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Lato|Patua+One&display=swap');
 
 body {
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
@@ -19,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Patua One", cursive;
+  font-family: 'Patua One', cursive;
   font-weight: 100;
 }
 
