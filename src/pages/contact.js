@@ -9,7 +9,7 @@ import { Container, Row, Col } from "react-grid-system"
 export default function AboutPage() {
   const headerImages = useStaticQuery(graphql`
     query {
-      happy: file(relativePath: { eq: "happy-doggo.jpg" }) {
+      puggly: file(relativePath: { eq: "puggly-doggo.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1024) {
             ...GatsbyImageSharpFluid
@@ -23,9 +23,9 @@ export default function AboutPage() {
     <Layout>
       <SEO title="Home" />
       <Hero
-        image={headerImages.happy}
-        title="About us"
-        text={{ __html: "About the club, etc etc" }}
+        image={headerImages.puggly}
+        title="Contact us"
+        text={{ __html: "Don't be shy, contact us!" }}
         small
       />
       <Container>

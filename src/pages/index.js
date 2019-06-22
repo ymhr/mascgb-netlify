@@ -9,13 +9,6 @@ import { Container, Row, Col } from "react-grid-system"
 export default function IndexPage() {
   const headerImages = useStaticQuery(graphql`
     query {
-      happy: file(relativePath: { eq: "happy-doggo.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1024) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       sullen: file(relativePath: { eq: "sullen-doggo.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1024) {
