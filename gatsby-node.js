@@ -39,15 +39,15 @@ exports.createPages = ({ graphql, actions }) => {
               edges {
                 node {
                   frontmatter {
-                    appPath
-                    title
-                    headerImage
-                    smallHeader
+                    templateKey
                     title
                     heading
                     blurb
-                    body
+                    headerImage
+                    smallHeader
+                    appPath
                   }
+                  html
                 }
               }
             }
@@ -60,7 +60,6 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create pages for each markdown file.
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          console.log("node", JSON.stringify(node))
           const appPath = node.frontmatter.appPath
           // GraphQL is not expecting the images folder to be part of the path
           const headerImage = node.frontmatter.headerImage.replace(
@@ -75,6 +74,7 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               ...node.frontmatter,
               headerImage,
+              html: node.html,
             },
           })
         })

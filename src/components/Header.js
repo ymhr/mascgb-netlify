@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import LogoWide from "images/logo-wide.png"
 import LogoTall from "images/logo.png"
@@ -168,23 +168,37 @@ const Overlay = styled(OverlayPosed)`
 `
 
 function NavLinks() {
+  const linkQuery = useStaticQuery(graphql`
+    query PageLinks {
+      allMarkdownRemark(
+        filter: { frontmatter: { templateKey: { eq: "page" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              appPath
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const links = linkQuery.allMarkdownRemark.edges.map(({ node: page }) => {
+    return {
+      url: page.frontmatter.appPath,
+      label: page.frontmatter.title,
+    }
+  })
+
   return (
     <NavList>
-      <li>
-        <Link to="/" activeClassName="active">
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link to="/about/" activeClassName="active">
-          About
-        </Link>
-      </li>
-      <li>
-        <Link to="/contact/" activeClassName="active">
-          Contact
-        </Link>
-      </li>
+      {links.map(link => (
+        <li key={link.url}>
+          <Link to={link.url}>{link.label}</Link>
+        </li>
+      ))}
     </NavList>
   )
 }
