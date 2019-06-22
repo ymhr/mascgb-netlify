@@ -7,7 +7,7 @@ import SEO from "@/layout/seo"
 import Hero from "@/components/Hero"
 import { Container, Row, Col } from "react-grid-system"
 
-export default function IndexPage() {
+export default function AboutPage() {
   const headerImages = useStaticQuery(graphql`
     query {
       happy: file(relativePath: { eq: "happy-doggo.jpg" }) {
@@ -31,9 +31,10 @@ export default function IndexPage() {
     <Layout>
       <SEO title="Home" />
       <Hero
-        image={headerImages.sullen}
-        title="Welcome to MASCGB"
-        text={{ __html: "A site for all the MAS things" }}
+        image={headerImages.happy}
+        title="About us"
+        text={{ __html: "About the club, etc etc" }}
+        small
       />
       <Container>
         <Row>
@@ -89,6 +90,13 @@ export default function IndexPage() {
           </Col>
         </Row>
       </Container>
+      {/* <h1>Hi people</h1>
+    <p>Welcome to your new Gatsby site.</p>
+    <p>Now go build something great.</p>
+    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      <Image />
+    </div>
+    <Link to="/page-2/">Go to page 2</Link> */}
     </Layout>
   )
 }
