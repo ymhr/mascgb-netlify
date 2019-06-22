@@ -4,6 +4,7 @@ import useVibrant from "use-vibrant-hook"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import BackgroundImage from "gatsby-background-image"
+import { Container, Row, Col } from "react-grid-system"
 
 const bounce = keyframes`
 	from {
@@ -54,7 +55,7 @@ const Overlay = styled.div`
 
 const Content = styled.div`
   color: #fff;
-  width: 70vw;
+  /* width: 70vw; */
   position: relative;
   box-sizing: border-box;
   padding: 20px;
@@ -91,10 +92,16 @@ export default function Hero({ title, text, image, small }) {
         {done && (
           <Overlay dark={colors.DarkVibrant.rgb} light={colors.Vibrant.rgb} />
         )}
-        <Content>
-          <h2>{title}</h2>
-          <div className="text" dangerouslySetInnerHTML={text} />
-        </Content>
+        <Container className="container" style={{ width: "100%" }}>
+          <Row className="row">
+            <Col className="col">
+              <Content>
+                <h2>{title}</h2>
+                <div className="text" dangerouslySetInnerHTML={text} />
+              </Content>
+            </Col>
+          </Row>
+        </Container>
         {!small && (
           <FontAwesomeIcon
             icon={faChevronDown}
