@@ -22,21 +22,26 @@ const NavBar = styled.nav`
   box-sizing: border-box;
   max-width: 100%;
 
+  @media screen and (max-width: 600px) {
+    justify-content: center;
+  }
+
   & h1 {
     margin: 0 20px 0 0;
     padding: 0;
     position: relative;
     top: 4px;
-
-    .responsive-logo {
-      width: 100px;
-    }
   }
 
   & ul {
     list-style: none;
     padding: 0;
     margin: 0;
+
+    @media screen and (max-width: 600px) {
+      display: none;
+      visibility: none;
+    }
 
     & li {
       display: inline-block;
@@ -60,13 +65,12 @@ const NavBar = styled.nav`
     height: 60px;
     background-size: contain;
     background-repeat: no-repeat;
-  }
 
-  @media screen and (max-width: 600px) {
-    .logo {
+    @media screen and (max-width: 600px) {
       width: 100px;
       background-image: url(${LogoTall});
       height: 60px;
+      margin: 0 auto;
     }
   }
 `
@@ -80,7 +84,7 @@ export default function Header() {
             <div className="logo" />
           </h1>
         </Link>
-        <ul>
+        <ul className="full-screen-nav">
           <li>
             <Link to="/" activeClassName="active">
               Home
