@@ -31,7 +31,7 @@ const Image = styled.div`
   .scroll-icon {
     width: 100px;
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     left: calc(50vw - 50px);
     opacity: 0.4;
     animation: ${bounce} 2s ease-in-out infinite alternate;
