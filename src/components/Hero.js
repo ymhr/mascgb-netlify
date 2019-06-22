@@ -4,7 +4,6 @@ import useVibrant from "use-vibrant-hook"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import BackgroundImage from "gatsby-background-image"
-import Background from "@/components/Hero/Background"
 
 const bounce = keyframes`
 	from {
