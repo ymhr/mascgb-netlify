@@ -5,7 +5,7 @@ heading: About us
 blurb: This is where we write information about the club.
 headerImage: /images/sullen-doggo.jpg
 smallHeader: true
-parent: Home
+parent: /test
 appPath: /about
 ---
 
