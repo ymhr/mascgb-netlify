@@ -2,8 +2,8 @@
 templateKey: page
 title: About
 heading: About us
-blurb: This is the home the Miniature American Sherpherd club of Great Britain.
-headerImage: /images/happy-doggo.jpg
+blurb: This is where we write information about the club.
+headerImage: /images/zn4m1vr.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et vulputate sapien, quis interdum tortor.
