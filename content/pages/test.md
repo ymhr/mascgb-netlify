@@ -4,6 +4,7 @@ title: Test
 heading: Test page
 blurb: This is a page for testing...things.
 headerImage: /images/zn4m1vr.jpg
+smallHeader: true
 appPath: /test
 ---
 
