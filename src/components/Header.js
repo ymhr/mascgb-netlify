@@ -48,6 +48,11 @@ const NavBar = styled.nav`
         text-decoration: none;
         color: inherit;
         margin-right: 20px;
+        padding-bottom: 5px;
+
+        &.active {
+          border-bottom: 3px solid #fff;
+        }
       }
     }
   }
@@ -80,10 +85,14 @@ export default function Header() {
         </Link>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" activeClassName="active">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about/">About</Link>
+            <Link to="/about/" activeClassName="active">
+              About
+            </Link>
           </li>
         </ul>
       </NavBar>
