@@ -52,8 +52,20 @@ const NavBar = styled.nav`
     }
   }
 
-  .tall-logo {
-    width: 100px;
+  .logo {
+    width: 300px;
+    background-image: url(${LogoWide});
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @media screen and (max-width: 600px) {
+    .logo {
+      width: 100px;
+      background-image: url(${LogoTall});
+      height: 60px;
+    }
   }
 `
 
@@ -63,26 +75,7 @@ export default function Header() {
       <NavBar>
         <Link to="/">
           <h1>
-            <MediaQuery query="(max-width: 600px)">
-              {matches => {
-                if (matches)
-                  return (
-                    <img
-                      className="tall-logo"
-                      src={LogoTall}
-                      style={{ width: 100 }}
-                    />
-                  )
-
-                return (
-                  <img
-                    className="wide-logo"
-                    src={LogoWide}
-                    style={{ width: 300 }}
-                  />
-                )
-              }}
-            </MediaQuery>
+            <div className="logo" />
           </h1>
         </Link>
         <ul>
