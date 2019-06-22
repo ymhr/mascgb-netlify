@@ -58,25 +58,6 @@ const NavBar = styled.nav`
 `
 
 export default function Header() {
-  //   const logos = useStaticQuery(graphql`
-  //     query {
-  //       logoWide: file(relativePath: { eq: "logo-wide.png" }) {
-  //         childImageSharp {
-  //           fluid(maxWidth: 300) {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }
-  //       logoTall: file(relativePath: { eq: "logo.png" }) {
-  //         childImageSharp {
-  //           fluid(maxWidth: 300) {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `)
-
   return (
     <div>
       <NavBar>
@@ -84,9 +65,22 @@ export default function Header() {
           <h1>
             <MediaQuery query="(max-width: 600px)">
               {matches => {
-                if (matches) return <img className="tall-logo" src={LogoTall} />
+                if (matches)
+                  return (
+                    <img
+                      className="tall-logo"
+                      src={LogoTall}
+                      style={{ width: 100 }}
+                    />
+                  )
 
-                return <img className="wide-logo" src={LogoWide} />
+                return (
+                  <img
+                    className="wide-logo"
+                    src={LogoWide}
+                    style={{ width: 300 }}
+                  />
+                )
               }}
             </MediaQuery>
           </h1>
