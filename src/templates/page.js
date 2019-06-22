@@ -6,54 +6,34 @@ import SEO from "@/layout/seo"
 import Hero from "@/components/Hero"
 import { Container, Row, Col } from "react-grid-system"
 
-export default function IndexPage() {
+export default function PageTemplate({ pageContext }) {
   const headerImages = useStaticQuery(graphql`
-    query {
-      sullen: file(relativePath: { eq: "sullen-doggo.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1024) {
-            ...GatsbyImageSharpFluid
+    query AllImages {
+      allFile(filter: { internal: { mediaType: { regex: "/^image/" } } }) {
+        edges {
+          node {
+            relativePath
+            childImageSharp {
+              fluid(maxWidth: 1024) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
     }
   `)
 
-  // const pageData = useStaticQuery(graphql`
-  //   query {
-  //     markdownRemark(fields: { slug: { eq: "/pages/home/" } }) {
-  //       fields {
-  //         slug
-  //       }
-  //       html
-  //       frontmatter {
-  //         blurb
-  //         headerImage
-  //         heading
-  //         templateKey
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
-  // const headerImage = useStaticQuery(graphql`
-  //   query {
-  //     file(relativePath: { eq: ${pageData.markdownRemark.frontmatter.headerImage} }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 1024) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+  const { node: headerImage } = headerImages.allFile.edges.find(
+    ({ node: image }) => image.relativePath === pageContext.headerImage
+  )
+  console.log(pageContext)
 
   return (
     <Layout>
       <SEO title="Home" />
       <Hero
-        image={headerImages.sullen}
+        image={headerImage}
         title="Welcome to MASCGB"
         text={{ __html: "A site for all the MAS things" }}
       />

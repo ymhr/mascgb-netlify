@@ -4,7 +4,7 @@ title: About
 heading: About us
 blurb: This is where we write information about the club.
 headerImage: /images/zn4m1vr.jpg
-appPath: about
+appPath: /about
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et vulputate sapien, quis interdum tortor.
