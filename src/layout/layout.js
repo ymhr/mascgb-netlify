@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Container, Row, Col } from "react-grid-system"
 
 import "@/layout/layout.css"
-import Header from "../components/Header"
+import Header from "@/components/Header"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
