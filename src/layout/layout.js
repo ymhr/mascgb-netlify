@@ -10,8 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Container, Row, Col } from "react-grid-system"
 
-import Header from "@/components/Header"
 import "@/layout/layout.css"
+import Header from "@/components/Header"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
