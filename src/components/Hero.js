@@ -75,7 +75,7 @@ const Content = styled.div`
 `
 
 export default function Hero({ title, text, image, small }) {
-  const { colors, done } = useVibrant(image.childImageSharp.fluid.base64)
+  const { colors, done } = useVibrant(image.childImageSharp.fluid.src)
 
   return (
     <>
