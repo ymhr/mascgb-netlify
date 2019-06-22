@@ -3,9 +3,6 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import LogoWide from "@/images/logo-wide.png"
 import LogoTall from "@/images/logo.png"
-import MediaQuery from "react-responsive"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
 
 const NavBar = styled.nav`
   background-image: linear-gradient(

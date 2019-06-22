@@ -1,8 +1,7 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "@/layout/layout"
-import Image from "@/components/image"
 import SEO from "@/layout/seo"
 import Hero from "@/components/Hero"
 import { Container, Row, Col } from "react-grid-system"
