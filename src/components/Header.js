@@ -5,7 +5,11 @@ import LogoWide from 'images/logo-wide.png';
 import LogoTall from 'images/logo.png';
 import posed, { PoseGroup } from 'react-pose';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faTimes,
+  faCaretDown
+} from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = styled.nav`
   background-image: linear-gradient(
@@ -76,7 +80,7 @@ const NavList = styled.ul`
   padding: 0;
   margin: 0;
 
-  & li {
+  li {
     display: inline-block;
 
     a {
@@ -87,6 +91,39 @@ const NavList = styled.ul`
 
       &.active {
         border-bottom: 3px solid #fff;
+      }
+    }
+
+    &:hover {
+      .sub-nav {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .sub-nav {
+      transition: all 0.2s ease-in-out;
+      transform: translateY(10px);
+      visibility: hidden;
+      opacity: 0;
+      background-color: #fff;
+      position: absolute;
+      color: black;
+      margin: 0;
+      padding: 10px;
+      list-style: none;
+      border-radius: 5px;
+
+      li {
+        display: block;
+        margin-bottom: 10px;
+
+        a {
+          &.active {
+            font-weight: bold;
+          }
+        }
       }
     }
   }
@@ -105,6 +142,31 @@ const NavList = styled.ul`
         &.active {
           background-color: #ddd;
           border-bottom: 0;
+        }
+      }
+
+      .sub-nav {
+        transition: all 0.2s ease-in-out;
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+        background-color: transparent;
+        position: relative;
+        color: black;
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+        border-radius: 5px;
+        li {
+          &:last-child {
+            border: none;
+          }
+
+          a {
+            &.active {
+              font-weight: normal;
+            }
+          }
         }
       }
     }
@@ -144,8 +206,6 @@ const Sidebar = styled.nav`
 
 const CloseButton = styled.button`
   border: none;
-  /* right: 10px;
-  top: 10px; */
   width: 40px;
   height: 40px;
   border-radius: 1000px;
@@ -185,24 +245,54 @@ function NavLinks() {
     }
   `);
 
-  const links = linkQuery.allMarkdownRemark.edges.map(({ node: page }) => {
-    const url = page.frontmatter.parent
-      ? `${page.frontmatter.parent}${page.frontmatter.appPath}`
-      : page.frontmatter.appPath;
-    // TODO: Nest subpages
-    return {
-      url,
-      label: page.frontmatter.title
-    };
-  });
+  const links = linkQuery.allMarkdownRemark.edges
+    .map(({ node: page }) => {
+      const url = page.frontmatter.parent
+        ? `${page.frontmatter.parent}${page.frontmatter.appPath}`
+        : page.frontmatter.appPath;
+      return {
+        url,
+        label: page.frontmatter.title,
+        parent: page.frontmatter.parent,
+        children: []
+      };
+    })
+    .sort((a, b) => (a.parent === null ? -1 : 1))
+    .reduce((agg, link) => {
+      if (link.parent) {
+        const parentIndex = agg.findIndex(l => l.url === link.parent);
+        if (parentIndex > -1) {
+          const parent = agg[parentIndex];
+          agg[parentIndex] = {
+            ...parent,
+            children: [...parent.children, link]
+          };
+        }
+      } else {
+        agg.push(link);
+      }
+      return agg;
+    }, []);
 
   return (
-    <NavList>
+    <NavList className="root-nav">
       {links.map(link => (
         <li key={link.url}>
           <Link to={link.url} activeClassName="active">
-            {link.label}
+            {link.label}{' '}
+            {!!link.children.length && <FontAwesomeIcon icon={faCaretDown} />}
           </Link>
+          {!!link.children.length && (
+            <ul className="sub-nav">
+              {link.children.map(child => (
+                <li key={child.url}>
+                  <Link to={child.url} activeClassName="active">
+                    {child.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </li>
       ))}
     </NavList>
