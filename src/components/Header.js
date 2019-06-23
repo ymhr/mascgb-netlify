@@ -237,6 +237,7 @@ function NavLinks() {
             frontmatter {
               title
               appPath
+              order
               parent
             }
           }
@@ -254,6 +255,7 @@ function NavLinks() {
         url,
         label: page.frontmatter.title,
         parent: page.frontmatter.parent,
+        order: page.frontmatter.order,
         children: []
       };
     })
@@ -267,12 +269,14 @@ function NavLinks() {
             ...parent,
             children: [...parent.children, link]
           };
+          agg[parentIndex].children.sort((a, b) => a.order - b.order);
         }
       } else {
         agg.push(link);
       }
       return agg;
-    }, []);
+    }, [])
+    .sort((a, b) => a.order - b.order);
 
   return (
     <NavList className="root-nav">
