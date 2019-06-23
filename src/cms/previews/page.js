@@ -19,7 +19,7 @@ export default function PagePreview({ entry, widgetFor }) {
             backgroundImage: `url(https://raw.githubusercontent.com/ymhr/mascgb-netlify/master${data.headerImage})`,
             backgroundSize: 'cover',
             backgroudPositon: 'center',
-            height: data.smallHeader ? '40vh' : '100vh',
+            height: data.smallHeader ? '40vh' : '95vh',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
