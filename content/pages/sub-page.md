@@ -37,6 +37,4 @@ What about text under it?
 
 <div class="something">hello world</div>
 
-
-
-<img class="nlf-styled-image" src="/images/02113_otuatauastonefields_1680x1050.jpg />
+<img class="nlf-styled-image right" src="/images/02113_otuatauastonefields_1680x1050.jpg" />
