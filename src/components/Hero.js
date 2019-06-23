@@ -15,11 +15,17 @@ const bounce = keyframes`
 	}
 `;
 
+const imageLoading = keyframes`
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+`;
+
 const Image = styled.div`
-  /* background-image: url(${props => props.image}); */
   height: ${props => (props.small ? '40vh' : '100vh')};
-  background-size: cover;
-  background-position: center;
   position: relative;
   z-index: 1;
   top: -60px;
@@ -27,6 +33,14 @@ const Image = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: -60px;
+  background-size: 400% 400%;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 0, 0, 0.5),
+    rgba(255, 255, 255, 0.5),
+    rgba(0, 0, 255, 0.5)
+  );
+  animation: ${imageLoading} 5s ease-in-out infinite alternate;
 
   .scroll-icon {
     width: 100px;
