@@ -35,3 +35,5 @@ And here is an image
 ![Happy doggo](/images/happy-doggo.jpg 'Happy doggo')
 
 What about text under it?
+
+<div class="something">hello world</div>
