@@ -144,9 +144,8 @@ const Sidebar = styled.nav`
 
 const CloseButton = styled.button`
   border: none;
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  /* right: 10px;
+  top: 10px; */
   width: 40px;
   height: 40px;
   border-radius: 1000px;
