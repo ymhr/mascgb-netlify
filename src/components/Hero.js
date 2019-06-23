@@ -77,7 +77,6 @@ const Content = styled.div`
 
 export default function Hero({ title, text, image, small }) {
   const { colors, done } = useVibrant(image.childImageSharp.fluid.src);
-  // const { colors, done } = useVibrant(image);
 
   return (
     <>
@@ -86,20 +85,6 @@ export default function Hero({ title, text, image, small }) {
           fluid={image.childImageSharp.fluid}
           style={{ width: '100%', height: '100%', position: 'absolute' }}
         />
-        {/* <div
-          style={{
-            backgroundImage: `url(${image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            width: '100%',
-            height: '100%',
-            position: 'absolute'
-          }} */}
-        />
-        {/* <Img
-          fluid={image.childImageSharp.fluid}
-          style={{ width: "100%", height: "100%" }}
-        /> */}
         {done && (
           <Overlay dark={colors.DarkVibrant.rgb} light={colors.Vibrant.rgb} />
         )}

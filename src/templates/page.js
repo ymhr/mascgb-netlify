@@ -15,7 +15,7 @@ export default function PageTemplate({ pageContext }) {
             relativePath
             childImageSharp {
               fluid(maxWidth: 1024) {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -28,14 +28,9 @@ export default function PageTemplate({ pageContext }) {
     ({ node: image }) => image.relativePath === pageContext.headerImage
   );
 
-  // console.log(headerImage);
-
-  // const test = require(`images/${pageContext.headerImage}`);
-
-  // console.log(test);
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title={pageContext.title} />
       <Hero
         image={headerImage}
         title={pageContext.heading}
