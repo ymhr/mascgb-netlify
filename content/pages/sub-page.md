@@ -10,6 +10,8 @@ appPath: /sub
 ---
 Body text
 
+The preview is more of an artist's impression of what the site will look like, instead of what it will _actually_ look like.artists
+
 And here is an image
 
 ![Happy doggo](/images/happy-doggo.jpg "Happy doggo")
