@@ -1,11 +1,11 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import LogoWide from "images/logo-wide.png"
-import LogoTall from "images/logo.png"
-import posed, { PoseGroup } from "react-pose"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
+import React from 'react';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
+import LogoWide from 'images/logo-wide.png';
+import LogoTall from 'images/logo.png';
+import posed, { PoseGroup } from 'react-pose';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = styled.nav`
   background-image: linear-gradient(
@@ -50,7 +50,7 @@ const NavBar = styled.nav`
       margin: 0 auto;
     }
   }
-`
+`;
 
 const NavLinksMobile = styled.div`
   display: block;
@@ -60,7 +60,7 @@ const NavLinksMobile = styled.div`
     display: none;
     visibility: hidden;
   }
-`
+`;
 const NavLinksDesktop = styled.div`
   display: block;
   visibility: visible;
@@ -69,7 +69,7 @@ const NavLinksDesktop = styled.div`
     display: none;
     visibility: hidden;
   }
-`
+`;
 
 const NavList = styled.ul`
   list-style: none;
@@ -109,7 +109,7 @@ const NavList = styled.ul`
       }
     }
   }
-`
+`;
 
 const Hamburger = styled.button`
   border: none;
@@ -127,20 +127,20 @@ const Hamburger = styled.button`
     display: none;
     visibilty: hidden;
   }
-`
+`;
 
 const Sidebar = styled.nav`
   height: 100vh;
   width: 70vw;
   transition: all 0.1s ease-in;
-  transform: translateX(${props => (props.open ? "0vh" : "-70vw")});
+  transform: translateX(${props => (props.open ? '0vh' : '-70vw')});
   position: fixed;
   top: 0;
   left: 0;
   background-color: #fff;
   z-index: 10;
   color: #000;
-`
+`;
 
 const CloseButton = styled.button`
   border: none;
@@ -151,12 +151,12 @@ const CloseButton = styled.button`
   height: 40px;
   border-radius: 1000px;
   background-color: transparent;
-`
+`;
 
 const OverlayPosed = posed.div({
   enter: { opacity: 1 },
-  exit: { opacity: 0 },
-})
+  exit: { opacity: 0 }
+});
 
 const Overlay = styled(OverlayPosed)`
   background-color: rgba(0, 0, 0, 0.8);
@@ -165,7 +165,7 @@ const Overlay = styled(OverlayPosed)`
   right: 0;
   left: 0;
   bottom: 0;
-`
+`;
 
 function NavLinks() {
   const linkQuery = useStaticQuery(graphql`
@@ -184,18 +184,18 @@ function NavLinks() {
         }
       }
     }
-  `)
+  `);
 
   const links = linkQuery.allMarkdownRemark.edges.map(({ node: page }) => {
     const url = page.frontmatter.parent
       ? `${page.frontmatter.parent}${page.frontmatter.appPath}`
-      : page.frontmatter.appPath
+      : page.frontmatter.appPath;
     // TODO: Nest subpages
     return {
       url,
-      label: page.frontmatter.title,
-    }
-  })
+      label: page.frontmatter.title
+    };
+  });
 
   return (
     <NavList>
@@ -205,14 +205,14 @@ function NavLinks() {
         </li>
       ))}
     </NavList>
-  )
+  );
 }
 
 export default function Header() {
-  const [openSidebar, setOpenSidebar] = React.useState(false)
+  const [openSidebar, setOpenSidebar] = React.useState(false);
 
   function toggleSidebar() {
-    setOpenSidebar(!openSidebar)
+    setOpenSidebar(!openSidebar);
   }
 
   return (
@@ -240,5 +240,5 @@ export default function Header() {
         </Sidebar>
       </NavLinksMobile>
     </NavBar>
-  )
+  );
 }

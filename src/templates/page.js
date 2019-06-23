@@ -9,7 +9,7 @@ import styled from 'styled-components';
 
 const ContentWrapper = styled.main`
   img {
-    max-width: 100%;
+    margin: 0 auto;
   }
 `;
 

@@ -22,7 +22,26 @@ module.exports = {
         path: `${__dirname}/content`
       }
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+              withWebp: true
+            }
+          }
+        ]
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,20 +58,11 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-transformer-sharp`,
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 1110,
-              withWebp: true
-            }
-          }
-        ]
-      }
+      resolve: `gatsby-transformer-sharp`
     },
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -71,7 +81,8 @@ module.exports = {
         '@': path.join(__dirname, 'src'),
         images: path.join(__dirname, 'images')
       }
-    }
+    },
+    `gatsby-plugin-netlify`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
