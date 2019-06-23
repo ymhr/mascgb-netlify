@@ -76,17 +76,17 @@ const Content = styled.div`
 `;
 
 export default function Hero({ title, text, image, small }) {
-  // const { colors, done } = useVibrant(image.childImageSharp.fluid.src);
-  const { colors, done } = useVibrant(image);
+  const { colors, done } = useVibrant(image.childImageSharp.fluid.src);
+  // const { colors, done } = useVibrant(image);
 
   return (
     <>
       <Image small={small}>
-        {/* <BackgroundImage
+        <BackgroundImage
           fluid={image.childImageSharp.fluid}
-          style={{ width: "100%", height: "100%", position: "absolute" }}
-        /> */}
-        <div
+          style={{ width: '100%', height: '100%', position: 'absolute' }}
+        />
+        {/* <div
           style={{
             backgroundImage: `url(${image})`,
             backgroundSize: 'cover',
@@ -94,7 +94,7 @@ export default function Hero({ title, text, image, small }) {
             width: '100%',
             height: '100%',
             position: 'absolute'
-          }}
+          }} */}
         />
         {/* <Img
           fluid={image.childImageSharp.fluid}
