@@ -8,6 +8,11 @@ smallHeader: true
 parent: /about
 order: 5
 appPath: /sub
+segments:
+  - content: This is segment 1
+    imageSide: left
+  - content: And this is segment 2
+    imageSide: right
 ---
 Body text
 
@@ -18,7 +23,3 @@ And here is an image
 ![Happy doggo](/images/happy-doggo.jpg 'Happy doggo')
 
 What about text under it?
-
-
-
-styledImage /images/02113_otuatauastonefields_1680x1050.jpg
