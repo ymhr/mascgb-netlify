@@ -23,7 +23,6 @@ export default function PageTemplate({ pageContext }) {
       }
     }
   `)
-  console.log(pageContext)
 
   const { node: headerImage } = headerImages.allFile.edges.find(
     ({ node: image }) => image.relativePath === pageContext.headerImage
