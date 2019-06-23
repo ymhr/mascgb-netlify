@@ -15,7 +15,7 @@ export default function PageTemplate({ pageContext }) {
             relativePath
             childImageSharp {
               fluid(maxWidth: 1024) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
