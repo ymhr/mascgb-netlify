@@ -178,6 +178,7 @@ function NavLinks() {
             frontmatter {
               title
               appPath
+              parent
             }
           }
         }
@@ -186,8 +187,12 @@ function NavLinks() {
   `)
 
   const links = linkQuery.allMarkdownRemark.edges.map(({ node: page }) => {
+    const url = page.frontmatter.parent
+      ? `${page.frontmatter.parent}${page.frontmatter.appPath}`
+      : page.frontmatter.appPath
+
     return {
-      url: page.frontmatter.appPath,
+      url,
       label: page.frontmatter.title,
     }
   })

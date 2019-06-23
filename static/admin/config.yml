@@ -35,4 +35,5 @@ collections:
       - { label: 'Header image', name: 'headerImage', widget: 'image' }
       - { label: 'Small header', name: 'smallHeader', widget: boolean, default: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Parent', name: 'parent', collection: 'page', widget: 'relation', searchFields: ['title'], valueField: 'appPath', displayFields: ['title', 'appPath'], required: false }
       - { label: "App path (DO NOT EDIT)", name: "appPath", widget: "string" }

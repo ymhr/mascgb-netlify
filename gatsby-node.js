@@ -46,6 +46,7 @@ exports.createPages = ({ graphql, actions }) => {
                     headerImage
                     smallHeader
                     appPath
+                    parent
                   }
                   html
                 }
@@ -61,19 +62,23 @@ exports.createPages = ({ graphql, actions }) => {
         // Create pages for each markdown file.
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           const appPath = node.frontmatter.appPath
+          const parentPath = node.frontmatter.parent
           // GraphQL is not expecting the images folder to be part of the path
           const headerImage = node.frontmatter.headerImage.replace(
             "/images/",
             ""
           )
+          const path = parentPath ? `${parentPath}${appPath}` : appPath
+
           createPage({
-            path: appPath,
+            path,
             component: pageTemplate,
             // In your blog post template's graphql query, you can use path
             // as a GraphQL variable to query for data from the markdown file.
             context: {
               ...node.frontmatter,
               headerImage,
+              generatedPath: path,
               html: node.html,
             },
           })
