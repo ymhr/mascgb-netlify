@@ -25,7 +25,7 @@ const imageLoading = keyframes`
 `;
 
 const Image = styled.div`
-  height: ${props => (props.small ? '40vh' : '100vh')};
+  height: ${props => (props.small ? '40vh' : '95vh')};
   position: relative;
   z-index: 1;
   top: -60px;
@@ -69,7 +69,6 @@ const Overlay = styled.div`
 
 const Content = styled.div`
   color: #fff;
-  /* width: 70vw; */
   position: relative;
   box-sizing: border-box;
   padding: 20px;
