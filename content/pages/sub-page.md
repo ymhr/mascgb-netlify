@@ -8,6 +8,11 @@ smallHeader: true
 parent: /about
 order: 5
 appPath: /sub
+segments:
+  - content: This is segment 1
+    imageSide: left
+  - content: And this is segment 2
+    imageSide: right
 ---
 
 Body text
