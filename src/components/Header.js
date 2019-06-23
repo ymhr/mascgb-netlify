@@ -200,7 +200,9 @@ function NavLinks() {
     <NavList>
       {links.map(link => (
         <li key={link.url}>
-          <Link to={link.url}>{link.label}</Link>
+          <Link to={link.url} activeClassName="active">
+            {link.label}
+          </Link>
         </li>
       ))}
     </NavList>
