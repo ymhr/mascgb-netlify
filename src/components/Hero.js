@@ -1,10 +1,10 @@
-import React from "react"
-import styled, { keyframes } from "styled-components"
-import useVibrant from "use-vibrant-hook"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
-import BackgroundImage from "gatsby-background-image"
-import { Container, Row, Col } from "react-grid-system"
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import useVibrant from 'use-vibrant-hook';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import BackgroundImage from 'gatsby-background-image';
+import { Container, Row, Col } from 'react-grid-system';
 
 const bounce = keyframes`
 	from {
@@ -13,11 +13,11 @@ const bounce = keyframes`
 	to {
 		transform: translateY(-10px);
 	}
-`
+`;
 
 const Image = styled.div`
   /* background-image: url(${props => props.image}); */
-  height: ${props => (props.small ? "40vh" : "100vh")};
+  height: ${props => (props.small ? '40vh' : '100vh')};
   background-size: cover;
   background-position: center;
   position: relative;
@@ -36,22 +36,22 @@ const Image = styled.div`
     opacity: 0.4;
     animation: ${bounce} 2s ease-in-out infinite alternate;
   }
-`
+`;
 
 const Overlay = styled.div`
   height: 100%;
   width: 100%;
   background-image: linear-gradient(
     to bottom right,
-    rgba(${props => props.dark.join(", ")}, 0.4),
-    rgba(${props => props.light.join(", ")}, 0.7)
+    rgba(${props => props.dark.join(', ')}, 0.4),
+    rgba(${props => props.light.join(', ')}, 0.7)
   );
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-`
+`;
 
 const Content = styled.div`
   color: #fff;
@@ -73,17 +73,28 @@ const Content = styled.div`
   .text {
     font-size: 16px;
   }
-`
+`;
 
 export default function Hero({ title, text, image, small }) {
-  const { colors, done } = useVibrant(image.childImageSharp.fluid.src)
+  // const { colors, done } = useVibrant(image.childImageSharp.fluid.src);
+  const { colors, done } = useVibrant(image);
 
   return (
     <>
       <Image small={small}>
-        <BackgroundImage
+        {/* <BackgroundImage
           fluid={image.childImageSharp.fluid}
           style={{ width: "100%", height: "100%", position: "absolute" }}
+        /> */}
+        <div
+          style={{
+            backgroundImage: `url(${image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            width: '100%',
+            height: '100%',
+            position: 'absolute'
+          }}
         />
         {/* <Img
           fluid={image.childImageSharp.fluid}
@@ -92,7 +103,7 @@ export default function Hero({ title, text, image, small }) {
         {done && (
           <Overlay dark={colors.DarkVibrant.rgb} light={colors.Vibrant.rgb} />
         )}
-        <Container className="container" style={{ width: "100%" }}>
+        <Container className="container" style={{ width: '100%' }}>
           <Row className="row">
             <Col className="col">
               <Content>
@@ -111,5 +122,5 @@ export default function Hero({ title, text, image, small }) {
         )}
       </Image>
     </>
-  )
+  );
 }
