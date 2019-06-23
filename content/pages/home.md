@@ -5,6 +5,7 @@ heading: Welcome!
 blurb: This is the home the Miniature American Sherpherd club of Great Britain.
 headerImage: /images/happy-doggo.jpg
 smallHeader: false
+order: 1
 appPath: /
 ---
 
