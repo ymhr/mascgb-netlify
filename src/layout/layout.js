@@ -10,10 +10,15 @@ import PropTypes from 'prop-types';
 
 import '@/layout/layout.css';
 import Header from '@/components/Header';
+import Helmet from 'react-helmet';
+const dom = require('@fortawesome/fontawesome-svg-core').dom;
 
 const Layout = ({ children }) => {
   return (
     <>
+      <Helmet>
+        <style>{dom.css()}</style>
+      </Helmet>
       <Header />
       <div>
         <main>{children}</main>
