@@ -5,15 +5,14 @@ import styled from 'styled-components';
 
 // `;
 
-export default function PagePreview({ entry, getAsset }) {
+export default function PagePreview({ entry, widgetFor }) {
   const data = entry.getIn(['data']).toJS();
-  console.log(getAsset(data.headerImage));
 
-  console.log('preview Data', data);
+  const content = widgetFor('body');
 
   if (data) {
     return (
-      <div>
+      <div className="preview">
         <div
           image={data.headerImage}
           style={{
@@ -33,9 +32,7 @@ export default function PagePreview({ entry, getAsset }) {
             <p>{data.blurb}</p>
           </div>
         </div>
-        <div>
-          <pre>{data.body}</pre>
-        </div>
+        <div>{content}</div>
       </div>
     );
   } else {
