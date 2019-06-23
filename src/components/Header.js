@@ -278,7 +278,7 @@ function NavLinks() {
     <NavList className="root-nav">
       {links.map(link => (
         <li key={link.url}>
-          <Link to={link.url} activeClassName="active">
+          <Link to={link.url} exact activeClassName="active">
             {link.label}{' '}
             {!!link.children.length && <FontAwesomeIcon icon={faCaretDown} />}
           </Link>
@@ -286,7 +286,7 @@ function NavLinks() {
             <ul className="sub-nav">
               {link.children.map(child => (
                 <li key={child.url}>
-                  <Link to={child.url} activeClassName="active">
+                  <Link to={child.url} exact activeClassName="active">
                     {child.label}
                   </Link>
                 </li>
