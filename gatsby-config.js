@@ -8,7 +8,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
+    },
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -25,7 +30,28 @@ module.exports = {
         path: `${__dirname}/images`
       }
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-polyfill-io`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [{ family: 'Lato' }, { family: 'Patua One' }]
+      }
+    },
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1110,
+              withWebp: true
+            }
+          }
+        ]
+      }
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

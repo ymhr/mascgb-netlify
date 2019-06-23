@@ -5,6 +5,13 @@ import Layout from '@/layout/layout';
 import SEO from '@/layout/seo';
 import Hero from '@/components/Hero';
 import { Container, Row, Col } from 'react-grid-system';
+import styled from 'styled-components';
+
+const ContentWrapper = styled.main`
+  img {
+    max-width: 100%;
+  }
+`;
 
 export default function PageTemplate({ pageContext }) {
   const headerImages = useStaticQuery(graphql`
@@ -40,7 +47,9 @@ export default function PageTemplate({ pageContext }) {
       <Container>
         <Row>
           <Col>
-            <div dangerouslySetInnerHTML={{ __html: pageContext.html }} />
+            <ContentWrapper
+              dangerouslySetInnerHTML={{ __html: pageContext.html }}
+            />
           </Col>
         </Row>
       </Container>
