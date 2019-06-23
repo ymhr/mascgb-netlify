@@ -9,3 +9,9 @@ parent: /about
 appPath: /sub
 ---
 Body text
+
+And here is an image
+
+![Happy doggo](/images/happy-doggo.jpg "Happy doggo")
+
+What about text under it?
