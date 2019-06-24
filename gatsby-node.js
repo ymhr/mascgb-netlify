@@ -50,7 +50,7 @@ exports.createPages = ({ graphql, actions }) => {
                     order
                     parent
                   }
-                  html
+                  htmlAst
                 }
               }
             }
@@ -81,7 +81,7 @@ exports.createPages = ({ graphql, actions }) => {
               ...node.frontmatter,
               headerImage,
               generatedPath: path,
-              html: node.html
+              htmlAst: node.htmlAst
             }
           });
         });

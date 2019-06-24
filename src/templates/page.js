@@ -6,6 +6,16 @@ import SEO from '@/layout/seo';
 import Hero from '@/components/Hero';
 import { Container, Row, Col } from 'react-grid-system';
 import styled from 'styled-components';
+import rehypeReact from 'rehype-react';
+
+function StyledImage({ url, classes, alt, title }) {
+  return <img src={url} className={classes} alt={alt} title={title} />
+}
+
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: {"styled-image": StyledImage}
+}).Compiler
 
 const ContentWrapper = styled.main`
   img {
@@ -47,9 +57,12 @@ export default function PageTemplate({ pageContext }) {
       <Container>
         <Row>
           <Col>
-            <ContentWrapper
+            {/* <ContentWrapper
               dangerouslySetInnerHTML={{ __html: pageContext.html }}
-            />
+            /> */}
+            <ContentWrapper>
+              {renderAst(pageContext.htmlAst)}
+            </ContentWrapper>
           </Col>
         </Row>
       </Container>

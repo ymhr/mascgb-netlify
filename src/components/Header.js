@@ -290,7 +290,7 @@ function NavLinks() {
             <ul className="sub-nav">
               {link.children.map(child => (
                 <li key={child.url}>
-                  <Link to={child.url} exact activeClassName="active">
+                  <Link to={child.url} activeClassName="active">
                     {child.label}
                   </Link>
                 </li>
