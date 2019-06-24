@@ -8,7 +8,6 @@ smallHeader: true
 order: 2
 appPath: /about
 ---
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et vulputate sapien, quis interdum tortor.
 
 Donec vestibulum tortor sit amet velit cursus, id cursus velit mattis. Vivamus sollicitudin auctor urna. Integer faucibus diam sit amet lacus congue malesuada. Curabitur lacinia et lectus at consequat. Praesent lobortis eget urna ac consectetur. Sed odio justo, tristique nec ultrices pretium, tincidunt vel sapien. Integer quis elit iaculis, aliquet nulla et, malesuada nibh. Quisque ultrices lectus massa, nec euismod lacus sagittis non.
@@ -16,6 +15,10 @@ Donec vestibulum tortor sit amet velit cursus, id cursus velit mattis. Vivamus s
 Maecenas sodales, risus vel suscipit maximus, tortor mauris gravida arcu, vel luctus quam turpis id enim. Proin malesuada purus pellentesque est pretium, in viverra lorem fermentum.
 
 Curabitur efficitur nisl quam, id fringilla libero commodo ut. Mauris at neque sed metus interdum finibus. In urna quam, varius vitae iaculis eu, fringilla in dolor. Mauris dui ex, porttitor ut bibendum id, fermentum sit amet dolor. Mauris viverra fringilla quam.
+
+
+
+<img class="right" src="/images/puggly-doggo.jpg" alt="Some doggo" title="and a title" />
 
 Donec commodo viverra lectus, a mollis lorem pretium non. Sed malesuada consequat dolor, quis varius nunc convallis at. Morbi dapibus nunc laoreet tortor consectetur, at ultrices diam aliquam. Phasellus blandit imperdiet lorem, vitae luctus enim rutrum ultricies. Aenean at lorem lacinia, posuere nisl quis, blandit eros.
 
