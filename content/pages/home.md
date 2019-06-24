@@ -2,7 +2,7 @@
 templateKey: page
 title: Home
 heading: Welcome!
-blurb: This is the home the Miniature American Sherpherd club of Great Britain.
+blurb: This is the home the Miniature American Shepherd Club of Great Britain.
 headerImage: /images/happy-doggo.jpg
 smallHeader: false
 order: 1
