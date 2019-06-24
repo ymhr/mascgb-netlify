@@ -7,9 +7,11 @@ import Hero from '@/components/Hero';
 import { Container, Row, Col } from 'react-grid-system';
 import styled from 'styled-components';
 import rehypeReact from 'rehype-react';
+import Image from '@/components/Image';
 
-function StyledImage({ url, classes, alt, title }) {
-  return <img src={url} className={classes} alt={alt} title={title} />
+function StyledImage({ src, classes, alt, title }) {
+  return <Image src={src} />
+  // return <img src={src} className={classes} alt={alt} title={title} />
 }
 
 const renderAst = new rehypeReact({
