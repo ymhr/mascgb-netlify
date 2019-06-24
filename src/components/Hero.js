@@ -97,6 +97,7 @@ export default function Hero({ title, text, image, small }) {
         <BackgroundImage
           fluid={image.childImageSharp.fluid}
           style={{ width: '100%', height: '100%', position: 'absolute' }}
+          fadeIn="soft"
         />
         {done && (
           <Overlay dark={colors.DarkVibrant.rgb} light={colors.Vibrant.rgb} />
