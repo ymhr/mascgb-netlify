@@ -16,9 +16,7 @@ Maecenas sodales, risus vel suscipit maximus, tortor mauris gravida arcu, vel lu
 
 Curabitur efficitur nisl quam, id fringilla libero commodo ut. Mauris at neque sed metus interdum finibus. In urna quam, varius vitae iaculis eu, fringilla in dolor. Mauris dui ex, porttitor ut bibendum id, fermentum sit amet dolor. Mauris viverra fringilla quam.
 
-
-
-<img class="right" src="/images/puggly-doggo.jpg" alt="Some doggo" title="and a title" />
+<img class="right" src="/images/puggly-doggo.jpg" alt="puggly" title="doggo" />
 
 Donec commodo viverra lectus, a mollis lorem pretium non. Sed malesuada consequat dolor, quis varius nunc convallis at. Morbi dapibus nunc laoreet tortor consectetur, at ultrices diam aliquam. Phasellus blandit imperdiet lorem, vitae luctus enim rutrum ultricies. Aenean at lorem lacinia, posuere nisl quis, blandit eros.
 
