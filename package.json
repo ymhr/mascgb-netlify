@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "mascgb",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "The website for the Miniature American Shepherd Club of Great Britain",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "James Martin",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
@@ -23,6 +23,7 @@
     "gatsby-plugin-root-import": "^2.0.5",
     "gatsby-plugin-sharp": "^2.2.1",
     "gatsby-plugin-styled-components": "^3.1.0",
+    "gatsby-remark-component": "^1.1.3",
     "gatsby-remark-images": "^3.1.0",
     "gatsby-remark-relative-images": "^0.2.2",
     "gatsby-source-filesystem": "^2.1.0",
@@ -43,7 +44,10 @@
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby"
+    "dogs",
+    "gatsby",
+    "react",
+    "netlify cms"
   ],
   "license": "MIT",
   "scripts": {
@@ -56,9 +60,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/ymhr/mascgb-netlify"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/ymhr/mascgb-netlify/issues"
   }
 }
