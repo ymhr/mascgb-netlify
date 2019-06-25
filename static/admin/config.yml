@@ -31,7 +31,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Heading', name: 'heading', widget: 'string' }
-      - { label: 'Blurb', name: 'blurb', widget: 'text' }
+      - { label: 'Blurb', name: 'blurb', widget: 'text', required: false }
       - { label: 'Header image', name: 'headerImage', widget: 'image', allow_multiple: false }
       - { label: 'Small header', name: 'smallHeader', widget: boolean, default: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
