@@ -11,7 +11,7 @@ export default function AboutPage() {
     query {
       puggly: file(relativePath: { eq: "puggly-doggo.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1024) {
+          fluid(maxWidth: 2048) {
             ...GatsbyImageSharpFluid
           }
         }

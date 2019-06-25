@@ -10,7 +10,7 @@ export default function Image({src}) {
 			  node {
 				relativePath
 				childImageSharp {
-				  fluid(maxWidth: 1024) {
+				  fluid(maxWidth: 2048) {
 					...GatsbyImageSharpFluid_withWebp_noBase64
 				  }
 				}
