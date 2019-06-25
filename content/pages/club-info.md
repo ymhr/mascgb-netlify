@@ -4,7 +4,7 @@ title: Club Info
 heading: Club Information
 blurb: About The Club
 headerImage: /images/img_9401.png
-smallHeader: true
+smallHeader: false
 order: 6
 appPath: /about
 ---
