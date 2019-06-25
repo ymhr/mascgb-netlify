@@ -10,6 +10,7 @@ blurb: >-
   The Australian Shepherd and Miniature American Shepherd share many of the same
   health issues
 headerImage: /images/img_9308.png
+headerImageAlignment: top
 smallHeader: true
 parent: /breed
 order: 5
