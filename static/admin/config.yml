@@ -33,7 +33,7 @@ collections:
       - { label: 'Heading', name: 'heading', widget: 'string' }
       - { label: 'Blurb', name: 'blurb', widget: 'text', required: false }
       - { label: 'Header image', name: 'headerImage', widget: 'image', allow_multiple: false }
-      - { label: 'Header Image Alignment', name: 'headerImageAlignment', widget: 'select', options: ['top', 'center', 'bottom'] }
+      - { label: 'Header Image Alignment', name: 'headerImageAlignment', widget: 'select', options: ['top', 'center', 'bottom'], required: false, default: ['center'] }
       - { label: 'Small header', name: 'smallHeader', widget: boolean, default: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Parent', name: 'parent', collection: 'page', widget: 'relation', searchFields: ['title'], valueField: 'appPath', displayFields: ['title', 'appPath'], required: false }

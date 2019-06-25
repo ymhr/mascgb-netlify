@@ -52,9 +52,10 @@ const Image = styled.div`
   }
 
   .gatsby-image-wrapper {
-     &::before, &::after {
-       background-position-y: ${props => props.headerImageAlignment || 'center'};
-     }
+    &::before,
+    &::after {
+      background-position-y: ${props => props.headerImageAlignment || 'center'};
+    }
   }
 `;
 
@@ -94,7 +95,13 @@ const Content = styled.div`
   }
 `;
 
-export default function Hero({ title, text, image, small , headerImageAlignment}) {
+export default function Hero({
+  title,
+  text,
+  image,
+  small,
+  headerImageAlignment
+}) {
   const { colors, done } = useVibrant(image.childImageSharp.fluid.base64);
 
   return (
