@@ -4,7 +4,7 @@ title: Club Events
 heading: Club Events
 blurb: Club Events
 headerImage: /images/64267190_634343370406667_5991369053095067648_n.jpg
-smallHeader: true
+smallHeader: false
 order: 5
 appPath: /events
 ---
