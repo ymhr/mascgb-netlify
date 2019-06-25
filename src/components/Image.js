@@ -1,8 +1,9 @@
 import React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import Img from 'gatsby-image';
+import BackgroundImg from 'gatsby-background-image';
 
-export default function Image({src}) {
+export default function Image({src, type = 'image'}) {
 	const images = useStaticQuery(graphql`
 	query Images {
 		allFile(filter: { internal: { mediaType: { regex: "/^image/" } } }) {
@@ -25,5 +26,10 @@ export default function Image({src}) {
 			return `/images/${image.relativePath}` === src
 		});
 
-	return <Img fluid={childImageSharp.fluid}/>
+	if(type === 'background') {
+		return <BackgroundImg fluid={childImageSharp.fluid}/>
+	}
+	else {
+		return <Img fluid={childImageSharp.fluid} />
+	}
 }
