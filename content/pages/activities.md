@@ -4,7 +4,7 @@ title: Activities
 heading: Activities
 blurb: List of some activities Miniature American Shepherds can be involved with
 headerImage: /images/untitled-3908.jpg
-smallHeader: true
+smallHeader: false
 order: 3
 appPath: /activities
 ---
