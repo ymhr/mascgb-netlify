@@ -50,6 +50,12 @@ const Image = styled.div`
     opacity: 0.4;
     animation: ${bounce} 2s ease-in-out infinite alternate;
   }
+
+  .gatsby-image-wrapper {
+     &::before, &::after {
+       background-position-y: ${props => props.headerImageAlignment || 'center'};
+     }
+  }
 `;
 
 const Overlay = styled.div`
@@ -88,12 +94,12 @@ const Content = styled.div`
   }
 `;
 
-export default function Hero({ title, text, image, small }) {
+export default function Hero({ title, text, image, small , headerImageAlignment}) {
   const { colors, done } = useVibrant(image.childImageSharp.fluid.base64);
 
   return (
     <>
-      <Image small={small}>
+      <Image small={small} headerImageAlignment={headerImageAlignment}>
         <BackgroundImage
           fluid={image.childImageSharp.fluid}
           style={{ width: '100%', height: '100%', position: 'absolute' }}

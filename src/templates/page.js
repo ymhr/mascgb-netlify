@@ -52,6 +52,7 @@ export default function PageTemplate({ pageContext }) {
       <SEO title={pageContext.title} />
       <Hero
         image={headerImage}
+        headerImageAlignment={pageContext.headerImageAlignment}
         title={pageContext.heading}
         text={{ __html: pageContext.blurb }}
         small={pageContext.smallHeader}

@@ -49,6 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
                     appPath
                     order
                     parent
+                    headerImageAlignment
                   }
                   htmlAst
                 }
