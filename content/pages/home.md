@@ -1,24 +1,13 @@
 ---
 templateKey: page
 title: Home
-heading: Welcome!
-blurb: This is the home the Miniature American Shepherd Club of Great Britain.
-headerImage: /images/happy-doggo.jpg
+heading: Home
+blurb: Welcome to the Miniature American Shepherd Club of GB
+headerImage: /images/ec46d2_6ee523e84ed749dab475d06d1d955e82_mv2_d_5303_3196_s_4_2.jpg
 smallHeader: false
 order: 1
 appPath: /
 ---
+The Miniature American Shepherd Club of GB (MASCGB) was started in 2013 by a group of MAS owners and enthusiasts dedicated to the safeguard and perpetuation of the Breed in the UK. The MASCGB exists for the benefit of its Members and the Committee aims to provide a full range of regular functions and other activities to promote the training, showing and other activities pertaining to the Miniature American Shepherd as well as encouraging good health management and breeding.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et vulputate sapien, quis interdum tortor.
-
-Donec vestibulum tortor sit amet velit cursus, id cursus velit mattis. Vivamus sollicitudin auctor urna. Integer faucibus diam sit amet lacus congue malesuada. Curabitur lacinia et lectus at consequat. Praesent lobortis eget urna ac consectetur. Sed odio justo, tristique nec ultrices pretium, tincidunt vel sapien. Integer quis elit iaculis, aliquet nulla et, malesuada nibh. Quisque ultrices lectus massa, nec euismod lacus sagittis non.
-
-Maecenas sodales, risus vel suscipit maximus, tortor mauris gravida arcu, vel luctus quam turpis id enim. Proin malesuada purus pellentesque est pretium, in viverra lorem fermentum.
-
-Curabitur efficitur nisl quam, id fringilla libero commodo ut. Mauris at neque sed metus interdum finibus. In urna quam, varius vitae iaculis eu, fringilla in dolor. Mauris dui ex, porttitor ut bibendum id, fermentum sit amet dolor. Mauris viverra fringilla quam.
-
-Donec commodo viverra lectus, a mollis lorem pretium non. Sed malesuada consequat dolor, quis varius nunc convallis at. Morbi dapibus nunc laoreet tortor consectetur, at ultrices diam aliquam. Phasellus blandit imperdiet lorem, vitae luctus enim rutrum ultricies. Aenean at lorem lacinia, posuere nisl quis, blandit eros.
-
-Maecenas non justo dignissim, interdum arcu accumsan, facilisis dolor. Maecenas sed massa mattis, commodo nisl et, elementum augue. In nisl dui, volutpat eget mauris et, finibus semper nisi. Vivamus mollis rutrum diam, et lobortis purus. Donec nec neque pharetra, efficitur augue ac, tincidunt justo. Duis imperdiet sapien sed eros eleifend, eu dignissim magna consectetur.
-
-Etiam varius est eget enim bibendum, nec laoreet massa lacinia. Quisque finibus metus eget orci condimentum volutpat. Morbi eget turpis augue. Vestibulum egestas tortor at scelerisque rhoncus.
+The MASCGB also encourages members to participate in disciplines such as agility, herding, obedience, conformation shows and educational events. If you require any help or advice on any aspect of MAS that you aren't able to find on this site then please get in touch. - We are always happy to help!
