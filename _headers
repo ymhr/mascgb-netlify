@@ -2,3 +2,6 @@
 for = "/static/*"
 [headers.values]
 Cache-Control = "public, max-age=360000"
+
+/sw.js   # Gatsby's default service worker file path
+   Cache-Control: no-cache
