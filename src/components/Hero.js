@@ -40,6 +40,8 @@ const Image = styled.div`
     rgba(255, 255, 255, 0.5),
     rgba(0, 0, 255, 0.5)
   );
+  background-image: url(${props => props.src});
+  background-size: cover;
   animation: ${imageLoading} 5s ease-in-out infinite alternate;
 
   .scroll-icon {
@@ -102,16 +104,21 @@ export default function Hero({
   small,
   headerImageAlignment
 }) {
-  const { colors, done } = useVibrant(image.childImageSharp.fluid.base64);
+  // const { colors, done } = useVibrant(image.childImageSharp.fluid.base64);
+  const { colors, done } = useVibrant(image);
 
   return (
     <>
-      <Image small={small} headerImageAlignment={headerImageAlignment}>
-        <BackgroundImage
+      <Image
+        small={small}
+        headerImageAlignment={headerImageAlignment}
+        src={image}
+      >
+        {/* <BackgroundImage
           fluid={image.childImageSharp.fluid}
           style={{ width: '100%', height: '100%', position: 'absolute' }}
           fadeIn="soft"
-        />
+        /> */}
         {done && (
           <Overlay dark={colors.DarkVibrant.rgb} light={colors.Vibrant.rgb} />
         )}
