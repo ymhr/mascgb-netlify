@@ -14,7 +14,6 @@ import rehypeReact from 'rehype-react';
 // }
 
 function CenteredImage({ src, className }) {
-  console.log({ src });
   return (
     <div className={className}>
       <a href={src} target="_blank">
@@ -56,7 +55,6 @@ const renderAst = new rehypeReact({
 // `;
 
 export default function PageTemplate({ pageContext }) {
-  console.log(pageContext.htmlAst);
   return (
     <Layout>
       <SEO title={pageContext.title} />
