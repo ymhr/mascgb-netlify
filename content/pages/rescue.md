@@ -16,6 +16,6 @@ MASCGB Rescue & Support (MASCGBRS) are dedicated to rescuing homeless, unwanted,
 
 If you would like any more information or you would like to show your interest in fostering a MAS in need of rescue please contact our club secretary on the contact us page.
 
-![damp dog](https://res.cloudinary.com/davg7hyp7/image/upload/v1561569788/images/img_20190329_141844_rwbnnq.jpg 'Damp Dog')
+![Damp dog](https://res.cloudinary.com/davg7hyp7/image/upload/v1561569779/img_20190329_141844_rwbnnq.jpg 'Damp dog')
 
 "A Miniature American Shepherd after a long muddy walk laying down for a rest, after we got home and looked at the photo we commentated on how she looked like an abandoned dog. Which was funny at the time but it does highlight a serious issue about how we feel as owners of MAS and as a breed club that no MAS should ever be put into this position in the first place and if it were to happen that we would want to do everything in our power to find that MAS a loving forever family home!" - MASCGB Member
