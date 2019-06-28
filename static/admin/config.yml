@@ -8,6 +8,11 @@ media_library:
     cloud_name: davg7hyp7
     api_key: 896985454355259
     output_filename_only: true
+    # default_transformation:
+    #   - - fetch_format: auto
+    #       width: 1024
+    #       crop: scale
+
 public_folder: /images
 
 collections:

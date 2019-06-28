@@ -11,22 +11,19 @@ import PropTypes from 'prop-types';
 import '@/layout/layout.css';
 import Header from '@/components/Header';
 import Helmet from 'react-helmet';
-import { CloudinaryContext } from 'cloudinary-react';
 const dom = require('@fortawesome/fontawesome-svg-core').dom;
 
 const Layout = ({ children }) => {
   return (
     <>
-      <CloudinaryContext cloudName="davg7hyp7">
-        <Helmet>
-          <style>{dom.css()}</style>
-        </Helmet>
-        <Header />
-        <div>
-          <main>{children}</main>
-          <footer></footer>
-        </div>
-      </CloudinaryContext>
+      <Helmet>
+        <style>{dom.css()}</style>
+      </Helmet>
+      <Header />
+      <div>
+        <main>{children}</main>
+        <footer></footer>
+      </div>
     </>
   );
 };

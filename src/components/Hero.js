@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import BackgroundImage from 'gatsby-background-image';
 import { Container, Row, Col } from 'react-grid-system';
+import cl from '@/utils/cloudinary';
+
+console.log(cl);
 
 const bounce = keyframes`
 	from {
@@ -105,9 +108,13 @@ export default function Hero({
   headerImageAlignment
 }) {
   // const { colors, done } = useVibrant(image.childImageSharp.fluid.base64);
-  const { colors, done } = useVibrant(
-    'http://res.cloudinary.com/davg7hyp7/image/upload/w_100/img_20190329_141844_rwbnnq.jpg'
-  );
+
+  const imageOpts = {
+    width: '200',
+    crop: 'scale'
+  };
+
+  const { colors, done } = useVibrant(cl.url(image, imageOpts));
 
   return (
     <>
@@ -115,7 +122,7 @@ export default function Hero({
         small={true}
         headerImageAlignment={headerImageAlignment}
         // src={image}
-        src="http://res.cloudinary.com/davg7hyp7/image/upload/c_scale,dpr_1.0,w_auto:200,g_face:center/img_20190329_141844_rwbnnq.jpg"
+        src={cl.url(image, { ...imageOpts, width: 'auto:200', dpr: 'auto' })}
       >
         {/* <BackgroundImage
           fluid={image.childImageSharp.fluid}

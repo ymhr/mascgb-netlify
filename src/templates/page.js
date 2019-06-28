@@ -7,7 +7,6 @@ import Hero from '@/components/Hero';
 import { Container, Row, Col } from 'react-grid-system';
 import styled from 'styled-components';
 import rehypeReact from 'rehype-react';
-import { Image, Transformation } from 'cloudinary-react';
 // import Image from '@/components/Image';
 
 // function StyledImage({ src, class: classes, alt, title }) {
