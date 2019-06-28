@@ -114,7 +114,7 @@ export default function Hero({
   return (
     <>
       <Image
-        small={true}
+        small={small}
         headerImageAlignment={headerImageAlignment}
         src={cl.url(image, { ...imageOpts, width: 'auto:200', dpr: 'auto' })}
       >

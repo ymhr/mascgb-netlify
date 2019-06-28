@@ -3,12 +3,13 @@ templateKey: page
 title: Flyball
 heading: Flyball
 blurb: Flyball
-headerImage: /images/flyball.png
+headerImage: flyball_efdmul.png
 smallHeader: true
 parent: /activities
 order: 3
 appPath: /flyball
 ---
+
 Flyball is a competitive team sport which is run on a knockout basis. It first became popular as a sport in America and made its debut in the UK at Crufts in 1990. Flyball is a fun and energetic sport your dog will love.
 
 Two teams of four dogs compete at the same time, each using a parallel 'racing lane' down which each dog in turn runs, clearing four hurdles in succession before triggering a pedal on the Flyball box.
@@ -19,7 +20,7 @@ If a run is not completed correctly the dog must re-run at the end of the line (
 
 The area needed for a Flyball race tends to be fairly large. Dogs can run at terrific speeds therefore require a good distance at the end of the race in order to slow down. A wide area at the end of the hurdles is also necessary to allow dogs enough room to pick up the ball and reverse direction safely! Any design of commercially produced flat-fronted Flyball box may be used provided the principles of safety are maintained.
 
-# Equipment 
+# Equipment
 
 There are 4 pieces of equipment required for Flyball:
 
@@ -27,7 +28,7 @@ There are 4 pieces of equipment required for Flyball:
 
 The hurdles should be 30.9cm (12ins) high for all classes and all sizes of dog and be painted white. For safety, the top rail must be flexible or padded.
 
-## Flyball box 
+## Flyball box
 
 Any flat fronted commercial Flyball box may be used provided the safety of the competing dogs is not at risk.
 
@@ -35,6 +36,6 @@ Any flat fronted commercial Flyball box may be used provided the safety of the c
 
 There has to be a Backstop Board in place as dogs can really hurtle over the course and there has to be something there to slow them down!
 
-## Balls 
+## Balls
 
 The balls that are loaded into the box must be un-punctured tennis balls. There is a risk that dogs could choke on something smaller, or damage themselves with something larger.

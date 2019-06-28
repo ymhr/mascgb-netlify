@@ -3,13 +3,14 @@ templateKey: page
 title: Mission Statement
 heading: Mission Statement
 blurb: Mission Statement
-headerImage: /images/gra_5114.jpg
+headerImage: gra_5114_qfrt0g.jpg
 smallHeader: true
 parent: /about
 order: 5
 appPath: /mission
 ---
-The Club exists for the benefit of its Members and the Committee aims to promote participation in the training, showing, working, breeding and other canine activities as well as encouraging good health management for the breed. The Miniature American Shepherd was originally bred as a herding dog for cattle and goats and descents from the Australian Shepherd. These characteristics should be preserved and developed.  Advice on any topic related to MAS is freely available to members at all times.   Membership is open to MAS enthusiasts wherever they live upon payment of an annual membership subscription (FREE UNTIL JAN 2016!).
+
+The Club exists for the benefit of its Members and the Committee aims to promote participation in the training, showing, working, breeding and other canine activities as well as encouraging good health management for the breed. The Miniature American Shepherd was originally bred as a herding dog for cattle and goats and descents from the Australian Shepherd. These characteristics should be preserved and developed. Advice on any topic related to MAS is freely available to members at all times. Membership is open to MAS enthusiasts wherever they live upon payment of an annual membership subscription (FREE UNTIL JAN 2016!).
 
 ## Aims
 
