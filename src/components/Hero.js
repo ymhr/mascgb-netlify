@@ -107,8 +107,6 @@ export default function Hero({
   small,
   headerImageAlignment
 }) {
-  // const { colors, done } = useVibrant(image.childImageSharp.fluid.base64);
-
   const imageOpts = {
     width: '200',
     crop: 'scale'
@@ -121,14 +119,8 @@ export default function Hero({
       <Image
         small={true}
         headerImageAlignment={headerImageAlignment}
-        // src={image}
         src={cl.url(image, { ...imageOpts, width: 'auto:200', dpr: 'auto' })}
       >
-        {/* <BackgroundImage
-          fluid={image.childImageSharp.fluid}
-          style={{ width: '100%', height: '100%', position: 'absolute' }}
-          fadeIn="soft"
-        /> */}
         {done && (
           <Overlay dark={colors.DarkVibrant.rgb} light={colors.Vibrant.rgb} />
         )}
