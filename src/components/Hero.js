@@ -3,11 +3,8 @@ import styled, { keyframes } from 'styled-components';
 import useVibrant from 'use-vibrant-hook';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import BackgroundImage from 'gatsby-background-image';
 import { Container, Row, Col } from 'react-grid-system';
 import cl from '@/utils/cloudinary';
-
-console.log(cl);
 
 const bounce = keyframes`
 	from {

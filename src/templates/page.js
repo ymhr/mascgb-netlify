@@ -13,50 +13,53 @@ import rehypeReact from 'rehype-react';
 //   return <Image src={src} className={classes} alt={alt} title={title} />;
 // }
 
-const renderAst = new rehypeReact({
-  createElement: React.createElement
-  // components: { 'styled-image': StyledImage }
-}).Compiler;
+function CenteredImage({ src, className }) {
+  console.log({ src });
+  return (
+    <div className={className}>
+      <a href={src} target="_blank">
+        <img src={src} />
+      </a>
+    </div>
+  );
+}
 
-const ContentWrapper = styled.main`
+const StyledCenteredImage = styled(CenteredImage)`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  a {
+    display: block;
+  }
+
   img {
-    margin: 0 auto;
+    max-width: 600px;
+
+    @media screen and (max-width: 600px) {
+      max-width: 100%;
+    }
   }
 `;
 
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: { img: StyledCenteredImage }
+  // components: { 'styled-image': StyledImage }
+}).Compiler;
+
+// const ContentWrapper = styled.main`
+//   img {
+//     margin: 0 auto;
+//     max-width: 500px;
+//   }
+// `;
+
 export default function PageTemplate({ pageContext }) {
-  // const headerImages = useStaticQuery(graphql`
-  //   query AllImages {
-  //     allFile(filter: { internal: { mediaType: { regex: "/^image/" } } }) {
-  //       edges {
-  //         node {
-  //           relativePath
-  //           childImageSharp {
-  //             fluid(maxWidth: 2048) {
-  //               ...GatsbyImageSharpFluid_withWebp
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
-
-  // const { node: headerImage } = headerImages.allFile.edges.find(
-  //   ({ node: image }) => image.relativePath === pageContext.headerImage
-  // );
-
+  console.log(pageContext.htmlAst);
   return (
     <Layout>
       <SEO title={pageContext.title} />
-
-      {/* <Image
-        publicId="img_9189_eub7ol.jpg"
-        dpr="auto"
-        responsive
-        width="auto"
-        crop="scale"
-      /> */}
       <Hero
         image={pageContext.headerImage}
         headerImageAlignment={pageContext.headerImageAlignment}
@@ -66,12 +69,7 @@ export default function PageTemplate({ pageContext }) {
       />
       <Container>
         <Row>
-          <Col>
-            {/* <ContentWrapper
-              dangerouslySetInnerHTML={{ __html: pageContext.html }}
-            /> */}
-            <ContentWrapper>{renderAst(pageContext.htmlAst)}</ContentWrapper>
-          </Col>
+          <Col>{renderAst(pageContext.htmlAst)}</Col>
         </Row>
       </Container>
     </Layout>
