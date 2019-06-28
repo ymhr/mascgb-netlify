@@ -7,6 +7,7 @@ media_library:
   config:
     cloud_name: davg7hyp7
     api_key: 896985454355259
+    output_filename_only: true
 public_folder: /images
 
 collections:

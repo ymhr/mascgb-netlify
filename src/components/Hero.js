@@ -105,14 +105,17 @@ export default function Hero({
   headerImageAlignment
 }) {
   // const { colors, done } = useVibrant(image.childImageSharp.fluid.base64);
-  const { colors, done } = useVibrant(image);
+  const { colors, done } = useVibrant(
+    'http://res.cloudinary.com/davg7hyp7/image/upload/w_100/img_20190329_141844_rwbnnq.jpg'
+  );
 
   return (
     <>
       <Image
-        small={small}
+        small={true}
         headerImageAlignment={headerImageAlignment}
-        src={image}
+        // src={image}
+        src="http://res.cloudinary.com/davg7hyp7/image/upload/c_scale,dpr_1.0,w_auto:200,g_face:center/img_20190329_141844_rwbnnq.jpg"
       >
         {/* <BackgroundImage
           fluid={image.childImageSharp.fluid}

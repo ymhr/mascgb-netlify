@@ -50,16 +50,21 @@ export default function PageTemplate({ pageContext }) {
   return (
     <Layout>
       <SEO title={pageContext.title} />
-      <Image publicId="img_9189_eub7ol.png">
-        <Transformation width="150" height="150" />
-      </Image>
-      {/* <Hero
+
+      {/* <Image
+        publicId="img_9189_eub7ol.jpg"
+        dpr="auto"
+        responsive
+        width="auto"
+        crop="scale"
+      /> */}
+      <Hero
         image={pageContext.headerImage}
         headerImageAlignment={pageContext.headerImageAlignment}
         title={pageContext.heading}
         text={{ __html: pageContext.blurb }}
         small={pageContext.smallHeader}
-      /> */}
+      />
       <Container>
         <Row>
           <Col>
