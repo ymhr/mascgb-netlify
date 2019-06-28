@@ -33,7 +33,7 @@ const Image = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: -60px;
-  background-size: 400% 400%;
+  /* background-size: 400% 400%; */
   background-image: linear-gradient(
     to bottom right,
     rgba(255, 0, 0, 0.5),
@@ -42,7 +42,7 @@ const Image = styled.div`
   );
   background-image: url(${props => props.src});
   background-size: cover;
-  animation: ${imageLoading} 5s ease-in-out infinite alternate;
+  /* animation: ${imageLoading} 5s ease-in-out infinite alternate; */
 
   .scroll-icon {
     width: 100px;

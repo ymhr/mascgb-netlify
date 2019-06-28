@@ -12,4 +12,4 @@ appPath: /gallery
 
 Aimee
 
-![Aimee]https://res.cloudinary.com/davg7hyp7/image/upload/v1561569785/img_9308_g2cuis.png 'Aimee')
+![Aimee](https://res.cloudinary.com/davg7hyp7/image/upload/v1561569785/img_9308_g2cuis.png 'Aimee')
