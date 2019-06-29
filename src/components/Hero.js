@@ -42,6 +42,8 @@ const Image = styled.div`
   );
   background-image: url(${props => props.src});
   background-size: cover;
+  background-position-y: ${props => props.headerImageAlignment || 'center'};
+  background-position-x: center;
   /* animation: ${imageLoading} 5s ease-in-out infinite alternate; */
 
   .scroll-icon {
