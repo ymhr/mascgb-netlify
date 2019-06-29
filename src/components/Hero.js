@@ -116,7 +116,12 @@ export default function Hero({
       <Image
         small={small}
         headerImageAlignment={headerImageAlignment}
-        src={cl.url(image, { ...imageOpts, width: 'auto:200', dpr: 'auto' })}
+        src={cl.url(image, {
+          ...imageOpts,
+          width: 'auto:200',
+          dpr: 'auto',
+          crop: 'fill'
+        })}
       >
         {done && (
           <Overlay dark={colors.DarkVibrant.rgb} light={colors.Vibrant.rgb} />

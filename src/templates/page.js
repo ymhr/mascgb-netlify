@@ -7,11 +7,6 @@ import Hero from '@/components/Hero';
 import { Container, Row, Col } from 'react-grid-system';
 import styled from 'styled-components';
 import rehypeReact from 'rehype-react';
-// import Image from '@/components/Image';
-
-// function StyledImage({ src, class: classes, alt, title }) {
-//   return <Image src={src} className={classes} alt={alt} title={title} />;
-// }
 
 function CenteredImage({ src, className }) {
   return (
@@ -46,13 +41,6 @@ const renderAst = new rehypeReact({
   components: { img: StyledCenteredImage }
   // components: { 'styled-image': StyledImage }
 }).Compiler;
-
-// const ContentWrapper = styled.main`
-//   img {
-//     margin: 0 auto;
-//     max-width: 500px;
-//   }
-// `;
 
 export default function PageTemplate({ pageContext }) {
   return (
