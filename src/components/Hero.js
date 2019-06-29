@@ -106,7 +106,9 @@ export default function Hero({
 }) {
   const imageOpts = {
     width: '200',
-    crop: 'scale'
+    crop: 'scale',
+    quality: '10',
+    fetch_format: 'auto'
   };
 
   const { colors, done } = useVibrant(cl.url(image, imageOpts));
@@ -118,9 +120,9 @@ export default function Hero({
         headerImageAlignment={headerImageAlignment}
         src={cl.url(image, {
           ...imageOpts,
-          width: 'auto:200',
-          dpr: 'auto',
-          crop: 'fill'
+          width: '1200',
+          crop: 'fill',
+          quality: '50'
         })}
       >
         {done && (
