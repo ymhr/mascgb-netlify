@@ -1,72 +1,72 @@
 {
-	"name": "mascgb",
-	"private": true,
-	"description": "The website for the Miniature American Shepherd Club of Great Britain",
-	"version": "0.1.0",
-	"author": "James Martin",
-	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^1.2.19",
-		"@fortawesome/free-solid-svg-icons": "^5.9.0",
-		"@fortawesome/react-fontawesome": "^0.1.4",
-		"babel-plugin-styled-components": "^1.10.1",
-		"cloudinary-core": "^2.6.3",
-		"gatsby": "^2.10.0",
-		"gatsby-background-image": "^0.7.3",
-		"gatsby-image": "^2.2.1",
-		"gatsby-plugin-catch-links": "^2.1.0",
-		"gatsby-plugin-manifest": "^2.2.0",
-		"gatsby-plugin-netlify": "^2.1.0",
-		"gatsby-plugin-netlify-cms": "^4.1.0",
-		"gatsby-plugin-offline": "^2.2.0",
-		"gatsby-plugin-polyfill-io": "^1.1.0",
-		"gatsby-plugin-prefetch-google-fonts": "^1.4.2",
-		"gatsby-plugin-react-helmet": "^3.1.0",
-		"gatsby-plugin-root-import": "^2.0.5",
-		"gatsby-plugin-sharp": "^2.2.1",
-		"gatsby-plugin-styled-components": "^3.1.0",
-		"gatsby-remark-component": "^1.1.3",
-		"gatsby-remark-images": "^3.1.0",
-		"gatsby-remark-relative-images": "^0.2.2",
-		"gatsby-source-filesystem": "^2.1.0",
-		"gatsby-transformer-remark": "^2.5.0",
-		"gatsby-transformer-sharp": "^2.2.0",
-		"imagemin-webpack-plugin": "^2.4.2",
-		"intersection-observer": "^0.7.0",
-		"netlify-cms-app": "^2.9.3",
-		"netlify-cms-media-library-cloudinary": "^1.3.2",
-		"prop-types": "^15.7.2",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6",
-		"react-grid-system": "^4.4.6",
-		"react-helmet": "^5.2.1",
-		"react-pose": "^4.0.8",
-		"rehype-react": "^3.1.0",
-		"styled-components": "^4.3.2",
-		"use-vibrant-hook": "^1.1.0"
-	},
-	"devDependencies": {
-		"prettier": "^1.18.2"
-	},
-	"keywords": [
-		"dogs",
-		"gatsby",
-		"react",
-		"netlify cms"
-	],
-	"license": "MIT",
-	"scripts": {
-		"build": "gatsby build",
-		"develop": "gatsby develop",
-		"format": "prettier --write src/**/*.{js,jsx}",
-		"start": "npm run develop",
-		"serve": "gatsby serve",
-		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ymhr/mascgb-netlify"
-	},
-	"bugs": {
-		"url": "https://github.com/ymhr/mascgb-netlify/issues"
-	}
+  "name": "mascgb",
+  "private": true,
+  "description": "The website for the Miniature American Shepherd Club of Great Britain",
+  "version": "0.1.0",
+  "author": "James Martin",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "babel-plugin-styled-components": "^1.10.1",
+    "cloudinary-core": "^2.6.3",
+    "gatsby": "^2.10.0",
+    "gatsby-background-image": "^0.7.3",
+    "gatsby-image": "^2.2.1",
+    "gatsby-plugin-catch-links": "^2.1.0",
+    "gatsby-plugin-manifest": "^2.2.0",
+    "gatsby-plugin-netlify": "^2.1.0",
+    "gatsby-plugin-netlify-cms": "^4.1.0",
+    "gatsby-plugin-offline": "^2.2.0",
+    "gatsby-plugin-polyfill-io": "^1.1.0",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.2",
+    "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-sharp": "^2.2.1",
+    "gatsby-plugin-styled-components": "^3.1.0",
+    "gatsby-remark-component": "^1.1.3",
+    "gatsby-remark-images": "^3.1.0",
+    "gatsby-remark-relative-images": "^0.2.2",
+    "gatsby-source-filesystem": "^2.1.0",
+    "gatsby-transformer-remark": "^2.5.0",
+    "gatsby-transformer-sharp": "^2.2.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "intersection-observer": "^0.7.0",
+    "netlify-cms-app": "^2.9.3",
+    "netlify-cms-media-library-cloudinary": "^1.3.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-grid-system": "^4.4.6",
+    "react-helmet": "^5.2.1",
+    "react-pose": "^4.0.8",
+    "rehype-react": "^3.1.0",
+    "styled-components": "^4.3.2",
+    "use-vibrant-hook": "^1.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "dogs",
+    "gatsby",
+    "react",
+    "netlify cms"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ymhr/mascgb-netlify"
+  },
+  "bugs": {
+    "url": "https://github.com/ymhr/mascgb-netlify/issues"
+  }
 }
