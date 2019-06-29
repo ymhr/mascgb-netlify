@@ -1,17 +1,24 @@
 import React from 'react';
+import cl from '../../utils/cloudinary';
 
 export default function PagePreview({ entry, widgetFor }) {
   const data = entry.getIn(['data']).toJS();
 
   const content = widgetFor('body');
 
+  const url = cl.url(data.headerImage, {
+    fetch_format: 'auto',
+    width: '800',
+    crop: 'fill',
+    quality: '50'
+  });
+
   if (data) {
     return (
       <div className="preview">
         <div
-          image={data.headerImage}
           style={{
-            backgroundImage: `url(https://raw.githubusercontent.com/ymhr/mascgb-netlify/master${data.headerImage})`,
+            backgroundImage: `url(${url})`,
             backgroundSize: 'cover',
             backgroudPositon: 'center',
             height: data.smallHeader ? '40vh' : '95vh',

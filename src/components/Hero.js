@@ -24,7 +24,7 @@ const imageLoading = keyframes`
   }
 `;
 
-const Image = styled.div`
+const HeroImage = styled.div`
   height: ${props => (props.small ? '40vh' : '95vh')};
   position: relative;
   z-index: 1;
@@ -113,19 +113,26 @@ export default function Hero({
     fetch_format: 'auto'
   };
 
+  const imageUrl = cl.url(image, {
+    ...imageOpts,
+    width: '1200',
+    crop: 'fill',
+    quality: '50'
+  });
+
+  React.useEffect(() => {
+    const imageEl = new Image();
+    imageEl.src = imageUrl;
+  }, [image]);
+
   const { colors, done } = useVibrant(cl.url(image, imageOpts));
 
   return (
     <>
-      <Image
+      <HeroImage
         small={small}
-        headerImageAlignment={headerImageAlignment}
-        src={cl.url(image, {
-          ...imageOpts,
-          width: '1200',
-          crop: 'fill',
-          quality: '50'
-        })}
+        headerImageAlignment={done && headerImageAlignment}
+        src={imageUrl}
       >
         {done && (
           <Overlay dark={colors.DarkVibrant.rgb} light={colors.Vibrant.rgb} />
@@ -147,7 +154,7 @@ export default function Hero({
             className="scroll-icon"
           />
         )}
-      </Image>
+      </HeroImage>
     </>
   );
 }

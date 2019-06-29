@@ -1,18 +1,27 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-
 import Layout from '@/layout/layout';
 import SEO from '@/layout/seo';
 import Hero from '@/components/Hero';
 import { Container, Row, Col } from 'react-grid-system';
 import styled from 'styled-components';
 import rehypeReact from 'rehype-react';
+import cl from '@/utils/cloudinary';
 
-function CenteredImage({ src, className }) {
+function CenteredImage({ src, className, alt, title }) {
+  const imageParts = src.split('/');
+  const imageId = imageParts[imageParts.length - 1];
+
+  const imageUrl = cl.url(imageId, {
+    width: '600',
+    crop: 'fill',
+    quality: '50',
+    fetch_format: 'auto'
+  });
+
   return (
     <div className={className}>
-      <a href={src} target="_blank">
-        <img src={src} />
+      <a href={src} target="_blank" rel="noopener noreferrer">
+        <img src={imageUrl} alt={alt} title={title} />
       </a>
     </div>
   );
