@@ -3,8 +3,8 @@ import styled, { keyframes } from 'styled-components';
 import useVibrant from 'use-vibrant-hook';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import BackgroundImage from 'gatsby-background-image';
 import { Container, Row, Col } from 'react-grid-system';
+import cl from '@/utils/cloudinary';
 
 const bounce = keyframes`
 	from {
@@ -33,14 +33,16 @@ const Image = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: -60px;
-  background-size: 400% 400%;
+  /* background-size: 400% 400%; */
   background-image: linear-gradient(
     to bottom right,
     rgba(255, 0, 0, 0.5),
     rgba(255, 255, 255, 0.5),
     rgba(0, 0, 255, 0.5)
   );
-  animation: ${imageLoading} 5s ease-in-out infinite alternate;
+  background-image: url(${props => props.src});
+  background-size: cover;
+  /* animation: ${imageLoading} 5s ease-in-out infinite alternate; */
 
   .scroll-icon {
     width: 100px;
@@ -102,16 +104,25 @@ export default function Hero({
   small,
   headerImageAlignment
 }) {
-  const { colors, done } = useVibrant(image.childImageSharp.fluid.base64);
+  const imageOpts = {
+    width: '200',
+    crop: 'scale'
+  };
+
+  const { colors, done } = useVibrant(cl.url(image, imageOpts));
 
   return (
     <>
-      <Image small={small} headerImageAlignment={headerImageAlignment}>
-        <BackgroundImage
-          fluid={image.childImageSharp.fluid}
-          style={{ width: '100%', height: '100%', position: 'absolute' }}
-          fadeIn="soft"
-        />
+      <Image
+        small={small}
+        headerImageAlignment={headerImageAlignment}
+        src={cl.url(image, {
+          ...imageOpts,
+          width: 'auto:200',
+          dpr: 'auto',
+          crop: 'fill'
+        })}
+      >
         {done && (
           <Overlay dark={colors.DarkVibrant.rgb} light={colors.Vibrant.rgb} />
         )}

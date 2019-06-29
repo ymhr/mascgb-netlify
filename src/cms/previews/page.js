@@ -1,9 +1,5 @@
 import React from 'react';
 
-// const HeaderImage = styled.div`
-
-// `;
-
 export default function PagePreview({ entry, widgetFor }) {
   const data = entry.getIn(['data']).toJS();
 
