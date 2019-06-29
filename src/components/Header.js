@@ -129,6 +129,8 @@ const NavList = styled.ul`
   }
 
   @media screen and (max-width: 600px) {
+    overflow-y: scroll;
+    max-height: 100%;
     li {
       display: block;
       border-bottom: 1px solid #ddd;
