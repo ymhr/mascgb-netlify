@@ -3,12 +3,13 @@ templateKey: page
 title: Breeders Directory
 heading: Breeders Directory
 blurb: Breeders Directory
-headerImage: /images/64267190_634343370406667_5991369053095067648_n.jpg
+headerImage: 64267190_634343370406667_5991369053095067648_n_ggaqof.jpg
 smallHeader: true
 parent: /about
 order: 1
 appPath: /directory
 ---
+
 All breeders listed below are members of MASCGB and follow our breeders guidlines:
 
 ## Breeding dogs
@@ -17,7 +18,7 @@ Minimum recommended age for use of stud dogs is 18 months
 
 No female should whelp a litter before 24 months of age
 
-Females to have at least 12 months in between whelping 
+Females to have at least 12 months in between whelping
 
 Females not to have a litter after 8 years of age without approval from the KC
 
@@ -31,7 +32,7 @@ Annual BVA (or overseas equivalent) eye examination to have been completed withi
 
 MDR1, DM, PRA, CEA testing to be completed unless clear through first generation by parentage. Carriers/affected dogs only to be mated to DNA tested clear dogs or 1st Generation Clear By Parentage.
 
-HSF4 testing to be completed unless clear through first generation by parentage.  MASCGB members agree not to breed from HSF4 tested carriers or affected dogs
+HSF4 testing to be completed unless clear through first generation by parentage. MASCGB members agree not to breed from HSF4 tested carriers or affected dogs
 
 # Basileas Miniature American Shepherds
 
@@ -43,7 +44,7 @@ Specialised in raising healthy, well socialized and active puppies. Basilea pups
 
 Based in Shropshire
 
-Our dogs are first and foremost family pets, we do breed periodically and this information can be found on our 'Litter Plans' page. We compete in agility with our dogs which can take up most of our weekends.  Obedience is vital in a multi dog household, so all of my dogs have achieved their Kennel Club Good Citizen Awards (Gold) and practice their obedience on a daily basis.  We holiday with our dogs and have invested in a touring caravan which makes it so much easier to take the pack away with us.  Mostly though, we are camped in the middle of a field at an agility show!
+Our dogs are first and foremost family pets, we do breed periodically and this information can be found on our 'Litter Plans' page. We compete in agility with our dogs which can take up most of our weekends. Obedience is vital in a multi dog household, so all of my dogs have achieved their Kennel Club Good Citizen Awards (Gold) and practice their obedience on a daily basis. We holiday with our dogs and have invested in a touring caravan which makes it so much easier to take the pack away with us. Mostly though, we are camped in the middle of a field at an agility show!
 
 I currently feed my dogs on a raw diet, puppies are raised on both raw and kibble so that new owners can choose their diet of choice. I also follow the ‘puppy culture’ programme of sensory, stimulatory enrichment and socialisation.
 
@@ -51,6 +52,6 @@ I currently feed my dogs on a raw diet, puppies are raised on both raw and kibbl
 
 Based in Staffordshire
 
-Starrytails had their first litter in March 2014 and are looking forward to seeing these puppies excel in agility and obedience. Their MAS Penny qualified into Grade 7 for Agility and lives in the family home with them and Ladybird from their first litter. They recently have been joined by a US import MAS called Ava. Puppies are raised in the home with a programme of sensory and stimulatory enrichment and socialisation. 
+Starrytails had their first litter in March 2014 and are looking forward to seeing these puppies excel in agility and obedience. Their MAS Penny qualified into Grade 7 for Agility and lives in the family home with them and Ladybird from their first litter. They recently have been joined by a US import MAS called Ava. Puppies are raised in the home with a programme of sensory and stimulatory enrichment and socialisation.
 
 ## \*MASCGB reserve the right to verify the health test documents of any members dog/s\*

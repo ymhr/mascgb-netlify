@@ -3,8 +3,8 @@ import styled, { keyframes } from 'styled-components';
 import useVibrant from 'use-vibrant-hook';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import BackgroundImage from 'gatsby-background-image';
 import { Container, Row, Col } from 'react-grid-system';
+import cl from '@/utils/cloudinary';
 
 const bounce = keyframes`
 	from {
@@ -24,7 +24,7 @@ const imageLoading = keyframes`
   }
 `;
 
-const Image = styled.div`
+const HeroImage = styled.div`
   height: ${props => (props.small ? '40vh' : '95vh')};
   position: relative;
   z-index: 1;
@@ -33,14 +33,18 @@ const Image = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: -60px;
-  background-size: 400% 400%;
+  /* background-size: 400% 400%; */
   background-image: linear-gradient(
     to bottom right,
     rgba(255, 0, 0, 0.5),
     rgba(255, 255, 255, 0.5),
     rgba(0, 0, 255, 0.5)
   );
-  animation: ${imageLoading} 5s ease-in-out infinite alternate;
+  background-image: url(${props => props.src});
+  background-size: cover;
+  background-position-y: ${props => props.headerImageAlignment || 'center'};
+  background-position-x: center;
+  /* animation: ${imageLoading} 5s ease-in-out infinite alternate; */
 
   .scroll-icon {
     width: 100px;
@@ -102,16 +106,34 @@ export default function Hero({
   small,
   headerImageAlignment
 }) {
-  const { colors, done } = useVibrant(image.childImageSharp.fluid.base64);
+  const imageOpts = {
+    width: '200',
+    crop: 'scale',
+    quality: '10',
+    fetch_format: 'auto'
+  };
+
+  const imageUrl = cl.url(image, {
+    ...imageOpts,
+    width: '1200',
+    crop: 'fill',
+    quality: '50'
+  });
+
+  React.useEffect(() => {
+    const imageEl = new Image();
+    imageEl.src = imageUrl;
+  }, [image]);
+
+  const { colors, done } = useVibrant(cl.url(image, imageOpts));
 
   return (
     <>
-      <Image small={small} headerImageAlignment={headerImageAlignment}>
-        <BackgroundImage
-          fluid={image.childImageSharp.fluid}
-          style={{ width: '100%', height: '100%', position: 'absolute' }}
-          fadeIn="soft"
-        />
+      <HeroImage
+        small={small}
+        headerImageAlignment={done && headerImageAlignment}
+        src={imageUrl}
+      >
         {done && (
           <Overlay dark={colors.DarkVibrant.rgb} light={colors.Vibrant.rgb} />
         )}
@@ -132,7 +154,7 @@ export default function Hero({
             className="scroll-icon"
           />
         )}
-      </Image>
+      </HeroImage>
     </>
   );
 }

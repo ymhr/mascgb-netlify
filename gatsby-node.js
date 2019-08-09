@@ -7,7 +7,6 @@
 // You can delete this file if you're not using it
 
 const path = require('path');
-const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 const { createFilePath } = require('gatsby-source-filesystem');
 
@@ -23,21 +22,6 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     });
   }
 };
-
-exports.onCreateWebpackConfig = ({
-  stage,
-  rules,
-  loaders,
-  plugins,
-  actions,
-}) => {
-  actions.setWebpackConfig({
-    
-    plugins: [
-      new ImageminPlugin()
-    ]
-  })
-}
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;

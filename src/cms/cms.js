@@ -1,9 +1,11 @@
 import CMS from 'netlify-cms-app';
+import cloudinary from 'netlify-cms-media-library-cloudinary'
 
 import '../layout/layout.css';
 import './previews/preview.css';
 import PagePreview from './previews/page';
 
+CMS.registerMediaLibrary(cloudinary);
 CMS.registerPreviewTemplate('page', PagePreview);
 
 CMS.registerEditorComponent({

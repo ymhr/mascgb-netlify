@@ -3,11 +3,12 @@ templateKey: page
 title: Activities
 heading: Activities
 blurb: List of some activities Miniature American Shepherds can be involved with
-headerImage: /images/untitled-3908.jpg
+headerImage: untitled-3908_ou2jdd.jpg
 smallHeader: false
 order: 3
 appPath: /activities
 ---
+
 - Agility
 
 - Conformation
@@ -17,4 +18,4 @@ appPath: /activities
 - Obedience and Rally
 - Therapy
 
-There are many more! 
+There are many more!

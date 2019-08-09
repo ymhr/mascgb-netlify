@@ -3,12 +3,12 @@ templateKey: page
 title: Members Dogs
 heading: Members Dogs
 blurb: Members Dogs
-headerImage: /images/img_8953.png
+headerImage: img_8953_axbt8j.png
 smallHeader: true
 parent: /gallery
 order: 1
 appPath: /members
 ---
-Bliss 
+Bliss
 
-![Bliss](/images/img_9122.png "Bliss")
+![Bliss](https://res.cloudinary.com/davg7hyp7/image/upload/v1561755886/img_9122_j8zxp6.png "Bliss")

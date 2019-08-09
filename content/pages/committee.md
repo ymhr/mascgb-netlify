@@ -3,12 +3,13 @@ templateKey: page
 title: Committee
 heading: Committee
 blurb: Committee
-headerImage: /images/02113_otuatauastonefields_1680x1050.jpg
+headerImage: 02113_otuatauastonefields_1680x1050_orza4m.jpg
 smallHeader: true
 parent: /about
 order: 3
 appPath: /committee
 ---
-# 
 
-![Committee](/images/committee.png "Committee")
+#
+
+![Committee](https://res.cloudinary.com/davg7hyp7/image/upload/v1561569775/committee_tdzaei.png 'Committee')
