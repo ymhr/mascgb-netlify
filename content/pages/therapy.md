@@ -3,7 +3,9 @@ templateKey: page
 title: Therapy
 heading: Therapy
 blurb: Therapy
-headerImage: img_20190329_141844_rwbnnq.jpg
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1567678564/IMG_20180719_165807_rgrxw1.png
+headerImageAlignment: center
 smallHeader: true
 parent: /activities
 order: 7
