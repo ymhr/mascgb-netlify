@@ -3,7 +3,9 @@ templateKey: page
 title: Good Citizens
 heading: Kennel Club Good Citizen Scheme
 blurb: Kennel Club Good Citizen Scheme
-headerImage: img_20180612_160037_pwcx7w.png
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1561756284/img_20180612_160037_pwcx7w.png
+headerImageAlignment: top
 smallHeader: true
 parent: /activities
 order: 5
