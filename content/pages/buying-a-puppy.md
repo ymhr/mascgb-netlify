@@ -3,7 +3,8 @@ templateKey: page
 title: Buying A Puppy
 heading: Buying A Puppy
 blurb: A puppy Guide
-headerImage: gra_5114_qfrt0g.jpg
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1567678825/sad_eyes_aau6l7.jpg
 smallHeader: true
 parent: /breed
 order: 2
