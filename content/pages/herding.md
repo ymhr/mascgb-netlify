@@ -3,7 +3,9 @@ templateKey: page
 title: Herding
 heading: Herding
 blurb: Herding
-headerImage: img_7522_gc49qi.jpg
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1567676666/IMG_4895_zuybmr.jpg
+headerImageAlignment: top
 smallHeader: true
 parent: /activities
 order: 4
