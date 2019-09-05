@@ -11,7 +11,6 @@ parent: /about
 order: 1
 appPath: /directory
 ---
-
 All breeders listed below are members of MASCGB and follow our breeders guidlines:
 
 ## Breeding dogs
@@ -54,6 +53,6 @@ I currently feed my dogs on a raw diet, puppies are raised on both raw and kibbl
 
 Based in Staffordshire
 
-Starrytails had their first litter in March 2014 and are looking forward to seeing these puppies excel in agility and obedience. Their MAS Penny qualified into Grade 7 for Agility and lives in the family home with them and Ladybird from their first litter. They recently have been joined by a US import MAS called Ava. Puppies are raised in the home with a programme of sensory and stimulatory enrichment and socialisation.
+We are dedicated to breeding top quality Mini Americans from our fully health tested dogs - we strive to breed within the breed standard for happy, healthy and intelligent dogs that excel in their owners chosen field of performance. We aim to promote this new breed in the UK by increasing the gene pool with a small number of carefully chosen dogs from top breeders in the U.S. and Europe, only allowing breeding from the best,  and assist with other breeders in gaining Kennel Club recognition.
 
 ## \*MASCGB reserve the right to verify the health test documents of any members dog/s\*
