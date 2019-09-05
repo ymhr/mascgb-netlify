@@ -3,7 +3,8 @@ templateKey: page
 title: Disclaimer
 heading: Disclaimer
 blurb: Disclaimer
-headerImage: img_9122_j8zxp6.png
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1561569779/img_20190329_141844_rwbnnq.jpg
 smallHeader: true
 parent: /about
 order: 4
