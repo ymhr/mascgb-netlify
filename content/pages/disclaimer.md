@@ -5,6 +5,7 @@ heading: Disclaimer
 blurb: Disclaimer
 headerImage: >-
   https://res.cloudinary.com/davg7hyp7/image/upload/v1561569779/img_20190329_141844_rwbnnq.jpg
+headerImageAlignment: top
 smallHeader: true
 parent: /about
 order: 4
