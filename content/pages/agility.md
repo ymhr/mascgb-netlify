@@ -3,7 +3,9 @@ templateKey: page
 title: Agility
 heading: Agility
 blurb: Agility
-headerImage: untitled-3908_ou2jdd.jpg
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1561755886/img_9122_j8zxp6.png
+headerImageAlignment: top
 smallHeader: true
 parent: /activities
 order: 1
