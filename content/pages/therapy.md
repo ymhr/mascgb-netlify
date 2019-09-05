@@ -4,7 +4,7 @@ title: Therapy
 heading: Therapy
 blurb: Therapy
 headerImage: >-
-  https://res.cloudinary.com/davg7hyp7/image/upload/v1567678564/IMG_20180719_165807_rgrxw1.png
+  https://res.cloudinary.com/davg7hyp7/image/upload/c_scale,h_1027/v1567678564/IMG_20180719_165807_rgrxw1.png
 headerImageAlignment: bottom
 smallHeader: true
 parent: /activities
