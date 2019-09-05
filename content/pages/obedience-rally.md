@@ -3,7 +3,8 @@ templateKey: page
 title: Obedience & Rally
 heading: Obedience and Rally
 blurb: Obedience and Rally
-headerImage: img_5800_cmka8m.jpg
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1567677681/gra_727327_40964517082_o_a4wenx.png
 smallHeader: true
 parent: /activities
 order: 6
