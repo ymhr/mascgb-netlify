@@ -3,7 +3,9 @@ templateKey: page
 title: Conformation
 heading: Conformation
 blurb: Conformation
-headerImage: img_20180618_113006_734_zyax92.jpg
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1567676362/IMG_0838_cx5xeb.jpg
+headerImageAlignment: top
 smallHeader: true
 parent: /activities
 order: 2
