@@ -3,7 +3,8 @@ templateKey: page
 title: History
 heading: History
 blurb: History of the Miniature American Shepherd
-headerImage: img_9122_j8zxp6.png
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1567679092/IMG_0846_jsjkhr.jpg
 smallHeader: true
 parent: /breed
 order: 6
