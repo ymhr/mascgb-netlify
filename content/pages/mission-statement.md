@@ -5,7 +5,7 @@ heading: Mission Statement
 blurb: Mission Statement
 headerImage: >-
   https://res.cloudinary.com/davg7hyp7/image/upload/v1567680665/IMG_0435_mgbur9.jpg
-headerImageAlignment: top
+headerImageAlignment: center
 smallHeader: true
 parent: /about
 order: 5
