@@ -3,7 +3,9 @@ templateKey: page
 title: Mission Statement
 heading: Mission Statement
 blurb: Mission Statement
-headerImage: gra_5114_qfrt0g.jpg
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1567680665/IMG_0435_mgbur9.jpg
+headerImageAlignment: top
 smallHeader: true
 parent: /about
 order: 5
