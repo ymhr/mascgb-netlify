@@ -5,7 +5,7 @@ heading: Kennel Club Good Citizen Scheme
 blurb: Kennel Club Good Citizen Scheme
 headerImage: >-
   https://res.cloudinary.com/davg7hyp7/image/upload/v1561756284/img_20180612_160037_pwcx7w.png
-headerImageAlignment: top
+headerImageAlignment: center
 smallHeader: true
 parent: /activities
 order: 5
