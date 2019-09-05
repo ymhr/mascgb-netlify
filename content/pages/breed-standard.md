@@ -3,7 +3,8 @@ templateKey: page
 title: Breed Standard
 heading: Breed Standard
 blurb: (AKC)
-headerImage: 64267190_634343370406667_5991369053095067648_n_ggaqof.jpg
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1567679318/Family_svlr7e.png
 headerImageAlignment: top
 smallHeader: true
 parent: /breed
