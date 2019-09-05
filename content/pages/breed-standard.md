@@ -4,12 +4,12 @@ title: Breed Standard
 heading: Breed Standard
 blurb: (AKC)
 headerImage: 64267190_634343370406667_5991369053095067648_n_ggaqof.jpg
+headerImageAlignment: top
 smallHeader: true
 parent: /breed
 order: 1
 appPath: /standard
 ---
-
 **What Is A Breed Standard?**
 
 A Breed Standard is the guideline which describes the ideal characteristics, temperament and appearance of a breed and ensures that the breed is fit for function. Absolute soundness is essential. Breeders and judges should at all times be careful to avoid obvious conditions or exaggerations which would be detrimental in any way to the health, welfare or soundness of this breed. From time to time certain conditions or exaggerations may be considered to have the potential to affect dogs in some breeds adversely, and judges and breeders are requested to refer to the Breed Watch section of the Kennel Club website here http://www.the-kennel-club.org.uk/services/public/breeds/ watch for details of any such current issues. If a feature or quality is desirable it should only be present in the right measure. However if a dog possesses a feature, characteristic or colour described as undesirable or highly undesirable it is strongly recommended that it should not be rewarded in the show ring.
