@@ -3,7 +3,8 @@ templateKey: page
 title: Grooming
 heading: Grooming
 blurb: '& Maintenance'
-headerImage: img_9401_x3vgeb.png
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1561755873/img_9401_x3vgeb.png
 headerImageAlignment: center
 smallHeader: true
 parent: /breed
