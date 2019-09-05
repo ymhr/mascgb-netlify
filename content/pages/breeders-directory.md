@@ -5,6 +5,7 @@ heading: Breeders Directory
 blurb: Breeders Directory
 headerImage: >-
   https://res.cloudinary.com/davg7hyp7/image/upload/v1567680065/IMG_0637_z0qaa3.jpg
+headerImageAlignment: center
 smallHeader: true
 parent: /about
 order: 1
