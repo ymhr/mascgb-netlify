@@ -4,7 +4,7 @@ title: Grooming
 heading: Grooming
 blurb: '& Maintenance'
 headerImage: img_9401_x3vgeb.png
-headerImageAlignment: top
+headerImageAlignment: center
 smallHeader: true
 parent: /breed
 order: 4
