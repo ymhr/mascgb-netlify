@@ -3,7 +3,8 @@ templateKey: page
 title: Activities
 heading: Activities
 blurb: List of some activities Miniature American Shepherds can be involved with
-headerImage: untitled-3908_ou2jdd.jpg
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1567675242/IMG_0387_qydgvl.jpg
 smallHeader: false
 order: 3
 appPath: /activities
