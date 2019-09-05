@@ -3,7 +3,8 @@ templateKey: page
 title: Raising a MAS
 heading: Raising a MAS
 blurb: Temperament and Development
-headerImage: img_9189_eub7ol.png
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1567679492/WP44226_t38i8k.jpg
 smallHeader: true
 parent: /breed
 order: 1
