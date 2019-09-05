@@ -5,7 +5,7 @@ heading: Therapy
 blurb: Therapy
 headerImage: >-
   https://res.cloudinary.com/davg7hyp7/image/upload/v1567678564/IMG_20180719_165807_rgrxw1.png
-headerImageAlignment: center
+headerImageAlignment: bottom
 smallHeader: true
 parent: /activities
 order: 7
