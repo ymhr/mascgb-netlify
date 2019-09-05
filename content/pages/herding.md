@@ -5,7 +5,7 @@ heading: Herding
 blurb: Herding
 headerImage: >-
   https://res.cloudinary.com/davg7hyp7/image/upload/v1567677137/IMG_7439_xix0vr.jpg
-headerImageAlignment: center
+headerImageAlignment: bottom
 smallHeader: true
 parent: /activities
 order: 4
