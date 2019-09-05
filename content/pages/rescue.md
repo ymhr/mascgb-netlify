@@ -3,7 +3,8 @@ templateKey: page
 title: Rescue
 heading: Rescue
 blurb: MASCGB Rescue & Support (MASCGBRS)
-headerImage: img_20190202_184913_340_xcd2vn.jpg
+headerImage: >-
+  https://res.cloudinary.com/davg7hyp7/image/upload/v1561569785/img_9189_eub7ol.png
 smallHeader: true
 parent: /breed
 order: 8
